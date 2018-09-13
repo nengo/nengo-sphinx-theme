@@ -1,58 +1,50 @@
-# -*- coding: utf-8; -*-
-#
-# Licensed to Crate (https://crate.io) under one or more contributor
-# license agreements.  See the NOTICE file distributed with this work for
-# additional information regarding copyright ownership.  Crate licenses
-# this file to you under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.  You may
-# obtain a copy of the License at
-#
-#   http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
-# WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
-# License for the specific language governing permissions and limitations
-# under the License.
-#
-# However, if you have executed another commercial license agreement
-# with Crate these terms will supersede the license and you may use the
-# software solely pursuant to the terms of the relevant commercial agreement.
-
-import os
+#!/usr/bin/env python
 import imp
-from setuptools import setup, find_packages
+import io
+import os
+import sys
 
-pwd = os.path.join(os.path.dirname(__file__))
-filepath = os.path.join(pwd, 'src', 'crate', 'theme', 'rtd', '__init__.py')
-version = imp.load_source('theme', filepath).__version__
+try:
+    from setuptools import find_packages, setup
+except ImportError:
+    raise ImportError(
+        "'setuptools' is required but not installed. To install it, "
+        "follow the instructions at "
+        "https://pip.pypa.io/en/stable/installing/#installing-with-get-pip-py")
 
-setup(name='crate-docs-theme',
-      version=version,
-      description='Crate Sphinx Theme for ReadTheDocs',
-      long_description='A Sphinx theme for Crate\'s Documentation',
-      classifiers=[
-          "Intended Audience :: Developers",
-          "License :: OSI Approved :: Apache Software License",
-          "Operating System :: OS Independent",
-          "Programming Language :: Python",
-          "Programming Language :: Python :: 2",
-          "Topic :: Software Development :: Documentation",
-      ],
-      author='Crate.IO GmbH',
-      author_email='office@crate.io',
-      url='https://github.com/crate/crate-docs-theme',
-      keywords='crate docs sphinx readthedocs',
-      license='Apache License 2.0',
-      packages=find_packages('src'),
-      package_dir={'':'src'},
-      namespace_packages=['crate'],
-      include_package_data=True,
-      zip_safe=False,
-      install_requires=[
-          'setuptools',
-          'Sphinx',
-          'sphinxcontrib-plantuml',
-          'sphinx_sitemap',
-      ],
+
+def read(*filenames, **kwargs):
+    encoding = kwargs.get("encoding", "utf-8")
+    sep = kwargs.get("sep", "\n")
+    buf = []
+    for filename in filenames:
+        with io.open(filename, encoding=encoding) as f:
+            buf.append(f.read())
+    return sep.join(buf)
+
+
+root = os.path.dirname(os.path.realpath(__file__))
+version_module = imp.load_source(
+    "version", os.path.join(root, "nengo_sphinx_theme", "version.py"))
+
+install_requires = ["sphinx"]
+
+setup(
+    name="nengo-sphinx-theme",
+    version=version_module.version,
+    author="Applied Brain Research",
+    author_email="info@appliedbrainresearch.com",
+    packages=find_packages(),
+    scripts=[],
+    url="https://github.com/nengo/nengo-sphinx-theme",
+    license="Apache v2",
+    description="Sphinx theme for Nengo websites",
+    long_description=read("README.rst"),
+    zip_safe=False,
+    install_requires=install_requires,
+    entry_points={
+        "sphinx.html_themes": [
+            "nengo_sphinx_theme = nengo_sphinx_theme",
+        ],
+    },
 )

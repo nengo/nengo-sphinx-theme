@@ -4,7 +4,7 @@ Contributing
 
 Thank you for your interest in contributing.
 
-Please see the CrateDB `contribution guide`_ for more information. Everything in
-the CrateDB contribution guide applies to this repository.
-
-.. _contribution guide: https://github.com/crate/crate/blob/master/CONTRIBUTING.rst
+The Nengo Sphinx theme is not accepting contributions.
+It is a fork of the Crate Docs Theme.
+Please contribute to the original `Crate Docs Theme
+<https://github.com/crate/crate-docs-theme>`_.
