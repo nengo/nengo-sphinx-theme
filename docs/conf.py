@@ -7,6 +7,7 @@ import nengo_sphinx_theme
 
 extensions = [
     "sphinx.ext.autodoc",
+    'sphinx.ext.githubpages',
     "sphinx.ext.todo",
     "nengo_sphinx_theme",
     "nengo_sphinx_theme.ext.canonical_url",
