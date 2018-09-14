@@ -2,7 +2,7 @@
 Nengo Sphinx Theme
 ==================
 
-A Sphinx_ theme for `Nengo documentation`_.
+A Sphinx theme for `Nengo documentation`_.
 Forked from the `Crate Docs Theme`_.
 
 Contributing
