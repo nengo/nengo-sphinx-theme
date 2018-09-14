@@ -1,11 +1,6 @@
 /**
-* This CSS file is for additional new styles built over the existing theme
-* ...so as to avoid breaking anything unexpectedly
-*/
-
-/**
-* Bootstrap changes
-*/
+ * Bootstrap changes
+ */
 a:hover,
 a:focus {
   text-decoration: none;
@@ -28,8 +23,8 @@ a:focus {
 
 .btn-primary,
 .btn-link a {
-  border: 2px solid #55D4F5;
-  background-color: #55D4F5;
+  border: 2px solid #6ea6d6;
+  background-color: #6ea6d6;
   color: white;
   outline: none;
   text-decoration: none;
@@ -37,9 +32,9 @@ a:focus {
 
 .btn-primary:hover,
 .btn-link a:hover {
-  color: #1CC8F3;
+  color: #6ea6d6;
   background-color: white;
-  border-color: #1CC8F3;
+  border-color: #6ea6d6;
 }
 
 .btn-primary:active,
@@ -47,8 +42,8 @@ a:focus {
 .btn-primary:focus,
 .btn-link a:focus {
   background-color: #F3FdFF !important;
-  color: #1CC8F3 !important;
-  border-color: #1CC8F3 !important;
+  color: #6ea6d6 !important;
+  border-color: #6ea6d6 !important;
   outline: none !important;
 }
 
@@ -197,7 +192,7 @@ body .main-nav .sub-menu li a {
   opacity: 0;
   background: #fff;
   border: 1px solid #cfd7db;
-  border-top: 2px solid #55d4f5;
+  border-top: 2px solid #6ea6d6;
   -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
   box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
 }
@@ -234,8 +229,8 @@ body .main-nav .sub-menu li a {
   margin-left: -10px;
 }
 .arrow:before {
-  border-color: rgba(85, 212, 245, 0);
-  border-bottom-color: #55d4f5;
+  border-color: rgba(110, 166, 214, 0);
+  border-bottom-color: #6ea6d6;
   border-width: 13px;
   margin-left: -13px;
 }
@@ -330,7 +325,7 @@ body .mm-menu .navbar-nav {
 
   body .wrapper-navleft,
   body #nav-affix {
-    max-width: none;
+    max-width: 240px;
   }
 
   .brand.w-nav-brand {
@@ -588,4 +583,94 @@ div.sidebar {
   margin-bottom: 20px;
   background: none;
   padding: 0;
+}
+
+/* From original nengo site */
+
+.MathJax .mi, .MathJax .mo {
+    color: inherit;
+}
+
+.project.container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.project {
+    border-bottom: 1px solid #eee;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    width: 100%;
+}
+
+.project:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.project p {
+    margin-bottom: 4px;
+    margin-top: 3px;
+}
+
+.project strong {
+    font-size: 120%;
+}
+
+.project-info strong a.external {
+    color: #333;
+}
+
+.project-info {
+    display: block;
+    margin-left: 0;
+    width: 340px;
+}
+
+.project-description {
+    display: block;
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+    .project {
+        border-bottom: none;
+    }
+
+    .project-info {
+        display: inline-block;
+        width: 340px;
+    }
+
+    .project-description {
+        display: inline-block;
+        vertical-align: top;
+        width: calc(100% - 350px);
+    }
+}
+
+.project-maintainer {
+    font-size: 80%;
+}
+
+.project-maintainer img {
+    vertical-align: text-bottom;
+}
+
+.project-badges img {
+    margin-bottom: 2px;
+    margin-right: 5px;
+    margin-top: 2px;
+}
+
+img.float-right {
+    float: right;
+    margin-left: 6px;
+    margin-bottom: 6px;
+}
+
+a.text-logo {
+    background-color: #6ea6d6;
 }

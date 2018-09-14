@@ -39,6 +39,8 @@ html_theme = "nengo_sphinx_theme"
 html_sidebars = {"**": ["sidebar.html", "sourcelink.html"]}
 html_last_updated_fmt = ""  # Suppress "Last updated on:" timestamp
 html_theme_options = {
+    "hidesidebar": "true",
+
     # HTML navbar class (Default: "navbar") to attach to <div> element.
     # For black navbar, do "navbar navbar-inverse"
     "navbar_class": "navbar navbar-inverse",

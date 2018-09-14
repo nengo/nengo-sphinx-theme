@@ -1,75 +1,90 @@
 <header class="header-nav">
   <div class="container">
     <div class="navbar w-nav" data-animation="default" data-collapse="small" data-contain="1" data-duration="400">
-      <a class="brand w-nav-brand" href="https://crate.io">
-        <img src="{{ pathto('_static', 1) }}/img/logo-crate.png" width="217">
+      <a class="brand w-nav-brand" href="index.html">
+        <img src="https://www.nengo.ai/design/_images/full-light.svg" width="100">
       </a>
       <nav class="w-nav-menu main-nav" role="navigation">
         <div class="dropdownBackground">
           <span class="arrow"></span>
         </div>
         <ul id="menu-top-navigation" class="menu">
+          <li class="navlink w-nav-link menu-item"><a href="overview.html">Overview</a></li>
           <li class="navlink w-nav-link menu-item menu-item-has-children">
-            <a href="https://crate.io/products/">Products</a>
+            <a href="documentation.html">Documentation</a>
+            <table class="sub-menu">
+              <tr>
+                <td class="menu-item"><a href="https://www.nengo.ai/nengo">NengoCore</a></td>
+                <td class="menu-item"><a href="https://github.com/nengo/nengo-gui">NengoGUI</a></td>
+                <td class="menu-item"><a href="https://www.nengo.ai/nengo-extras/">NengoExtras</a></td>
+                <td class="menu-item"><a href="https://www.nengo.ai/nengo-spa/">NengoSPA</a></td>
+                <td class="menu-item"><a href="https://arvoelke.github.io/nengolib-docs/">NengoLib</a></td>
+                <td class="menu-item"><a href="https://github.com/nengo/nengo-examples">NengoExamples</a></td>
+              </tr>
+              <tr>
+                <td class="menu-item"><a href="https://www.nengo.ai/nengo-dl/">NengoDL</a></td>
+                <td class="menu-item"><a href="https://github.com/nengo/nengo-fpga">NengoFPGA</a></td>
+                <td class="menu-item"><a href="https://github.com/nengo/nengo-loihi">NengoLoihi</a></td>
+                <td class="menu-item"><a href="https://github.com/project-rig/nengo_spinnaker">NengoSpinnaker</a></td>
+                <td class="menu-item"><a href="https://github.com/nengo/nengo-ocl">NengoOCL</a></td>
+                <td class="menu-item"><a href="https://github.com/nengo/nengo-mpi">NengoMPI</a></td>
+              </tr>
+              <tr>
+                <td class="menu-item"><a href="quickstart.html">Quick Start</a></td>
+                <td class="menu-item"><a href="publications.html">Publications</a></td>
+                <td class="menu-item"><a href="videos.html">Videos</a></td>
+              </tr>
+            </table>
+          </li>
+          <li class="navlink w-nav-link menu-item menu-item-has-children">
+            <a href="community.html">Community</a>
             <ul class="sub-menu">
-              <li class="menu-item"><a href="https://crate.io/products/cratedb/">CrateDB</a></li>
-              <li class="menu-item"><a href="https://crate.io/products/cratedb-enterprise/">CrateDB Enterprise</a></li>
-              <li class="menu-item"><a href="https://crate.io/products/cratedb-cloud/">CrateDB Cloud</a></li>
+              <li class="menu-item"><a href="https://forum.nengo.ai/">Forum</a></li>
+              <li class="menu-item"><a href="summerschool.html">Summer School</a></li>
+              <li class="menu-item"><a href="people.html">People</a></li>
             </ul>
           </li>
           <li class="navlink w-nav-link menu-item menu-item-has-children">
-            <a href="https://crate.io/use-cases/">Use Cases</a>
+            <a href="projects.html">Development</a>
             <ul class="sub-menu">
-              <li class="menu-item"><a href="https://crate.io/customers/">Customers</a></li>
-              <li class="menu-item"><a href="https://crate.io/use-cases/iot-sensor-data/">IoT &amp; Sensor Data</a></li>
-              <li class="menu-item"><a href="https://crate.io/use-cases/time-series/">Time Series</a></li>
-              <li class="menu-item"><a href="https://crate.io/use-cases/geospatial-analytics/">Geospatial Analytics</a></li>
-              <li class="menu-item"><a href="https://crate.io/use-cases/cyber-security/">Cybersecurity</a></li>
+              <li class="menu-item"><a href="contributing.html">Contributor Guide</a></li>
+              <li class="menu-item"><a href="projects.html">Ecosystem</a></li>
             </ul>
           </li>
-          <li class="navlink w-nav-link menu-item menu-item-has-children">
-            <a href="https://crate.io/resources/">Resources</a>
-            <ul class="sub-menu">
-              <li class="menu-item"><a href="https://crate.io/docs/">Documentation</a></li>
-              <li class="menu-item"><a href="https://crate.io/resources/">Resource Library</a></li>
-              <li class="menu-item"><a href="https://crate.io/blog/">Blog</a></li>
-            </ul>
-          </li>
-          <li class="navlink w-nav-link menu-item"><a href="https://crate.io/pricing/">Pricing</a></li>
-          <li class="btn-link w-nav-link menu-item"><a href="https://crate.io/download/">Download</a></li>
+          <li class="navlink w-nav-link menu-item"><a href="README.html">About</a></li>
+          <li class="btn-link w-nav-link menu-item"><a href="download.html">Download</a></li>
         </ul>
       </nav>
 
       <div id="mobile-nav" class="mm-menu">
         <ul class="offcanvas-menu">
+          <li class="navlink w-nav-link menu-item"><a href="overview.html">Overview</a></li>
           <li class="navlink w-nav-link menu-item menu-item-has-children">
-            <a href="https://crate.io/products/">Products</a>
+            <a href="documentation.html">Documentation</a>
             <ul class="sub-menu">
-              <li class="menu-item"><a href="https://crate.io/products/cratedb/">CrateDB</a></li>
-              <li class="menu-item"><a href="https://crate.io/products/cratedb-enterprise/">CrateDB Enterprise</a></li>
-              <li class="menu-item"><a href="https://crate.io/products/cratedb-cloud/">CrateDB Cloud</a></li>
+              <li class="menu-item"><a href="quickstart.html">Quick Start</a></li>
+              <li class="menu-item"><a href="http://www.nengo.ai/nengo">NengoCore</a></li>
+              <li class="menu-item"><a href="https://github.com/nengo/nengo-gui#nengo-gui">NengoGUI</a></li>
             </ul>
           </li>
           <li class="navlink w-nav-link menu-item menu-item-has-children">
-            <a href="https://crate.io/use-cases/">Use Cases</a>
+            <a href="community.html">Community</a>
             <ul class="sub-menu">
-              <li class="menu-item"><a href="https://crate.io/customers/">Customers</a></li>
-              <li class="menu-item"><a href="https://crate.io/use-cases/iot-sensor-data/">IoT &amp; Sensor Data</a></li>
-              <li class="menu-item"><a href="https://crate.io/use-cases/time-series/">Time Series</a></li>
-              <li class="menu-item"><a href="https://crate.io/use-cases/geospatial-analytics/">Geospatial Analytics</a></li>
-              <li class="menu-item"><a href="https://crate.io/use-cases/cyber-security/">Cybersecurity</a></li>
+              <li class="menu-item"><a href="https://forum.nengo.ai/">Forum</a></li>
+              <li class="menu-item"><a href="summerschool.html">Summer School</a></li>
+              <li class="menu-item"><a href="people.html">People</a></li>
+              <li class="menu-item"><a href="build-a-brain/index.html">How to Build a Brain (Book)</a></li>
             </ul>
           </li>
           <li class="navlink w-nav-link menu-item menu-item-has-children">
-            <a href="https://crate.io/resources/">Resources</a>
+            <a href="projects.html">Development</a>
             <ul class="sub-menu">
-              <li class="menu-item"><a href="https://crate.io/docs/">Documentation</a></li>
-              <li class="menu-item"><a href="https://crate.io/resources/">Resource Library</a></li>
-              <li class="menu-item"><a href="https://crate.io/blog/">Blog</a></li>
+              <li class="menu-item"><a href="contributing.html">Contributor Guide</a></li>
+              <li class="menu-item"><a href="projects.html">Ecosystem</a></li>
             </ul>
           </li>
-          <li class="navlink w-nav-link menu-item"><a href="https://crate.io/pricing/">Pricing</a></li>
-          <li class="btn-link w-nav-link menu-item"><a href="https://crate.io/download/">Download</a></li>
+          <li class="navlink w-nav-link menu-item"><a href="README.html">About</a></li>
+          <li class="btn-link w-nav-link menu-item"><a href="download.html">Download</a></li>
         </ul>
       </div>
 
