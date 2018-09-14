@@ -1,6 +1,3 @@
 <ul class="toctree nav nav-list">
-    <li class="current">
-      <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">Contributor Guide</a>
-      {{ toctree(maxdepth=3|toint, collapse=True, includehidden=theme_globaltoc_includehidden|tobool) }}
-    </li>
+  {{ toctree(maxdepth=3|toint, collapse=True, includehidden=theme_globaltoc_includehidden|tobool) }}
 </ul>
