@@ -35,6 +35,7 @@ setup(
     author="Applied Brain Research",
     author_email="info@appliedbrainresearch.com",
     packages=find_packages(),
+    include_package_data=True,
     scripts=[],
     url="https://github.com/nengo/nengo-sphinx-theme",
     license="Apache v2",
