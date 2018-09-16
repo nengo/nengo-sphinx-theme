@@ -1,15 +1,14 @@
 {% extends "basic/layout.html" %}
 
-{% set css_files = [
+{% set css_files = css_files + [
   '_static/css/normalize.css',
   '_static/css/bootstrap.css',
   '_static/css/mmenu.all.css',
   '_static/css/components.css',
   '_static/css/nengo.css',
-  ]
-%}
+]%}
 
-{% set script_files = [
+{% set script_files = script_files + [
   '_static/js/modernizr.js',
   '_static/js/underscore.min.js',
   '_static/doctools.js',
@@ -18,9 +17,8 @@
   '_static/js/bootstrap.js',
   '_static/js/mmenu.all.min.js',
   '_static/js/fontawesome.js',
-  '_static/js/custom.js'
-  ]
-%}
+  '_static/js/custom.js',
+]%}
 
 {%- block extrahead %}
 <meta charset='utf-8'>
