@@ -366,11 +366,6 @@ table.sub-menu td:last-child {
         padding-right: 0;
     }
 
-    body .wrapper-navleft,
-    body #nav-affix {
-        max-width: 240px;
-    }
-
     .brand.w-nav-brand {
         padding-left: 0;
     }
@@ -412,11 +407,6 @@ table.sub-menu td:last-child {
 #nav-affix {
     width: 100%;
     margin: 0;
-}
-
-.wrapper-navleft,
-#nav-affix {
-    max-width: 260px;
 }
 
 .wrapper-navleft,
@@ -1037,11 +1027,6 @@ p {
     line-height: 1.5em;
 }
 
-a {
-    color: #6ea6d6;
-    text-decoration: none;
-}
-
 a:hover {
     opacity: 0.7;
     color: #6ea6d6;
@@ -1435,7 +1420,7 @@ header .brand {
 }
 
 .wrapper-navleft {
-    width: 240px;
+    width: 100%;
     margin-right: 32px;
     margin-bottom: 32px;
     padding: 8px 16px;
@@ -1998,8 +1983,19 @@ a.learn-more-link, .wrapper-teaser-img p {
 }
 
 .version-select-container {
-    float: right;
-    text-align: right;
+    display: inline-block;
+    position: absolute;
+    margin-right: 31px;
+    margin-top: 8px;
+    right: 0;
+}
+
+#sourcelink {
+    margin-top: 8px;
+}
+
+.version-select-container .toggle-text {
+    color: #6ea6d6;
 }
 
 .toggle {
@@ -2504,7 +2500,6 @@ html.w-mod-js *[data-ix="hide-color-logo"] {
     }
     .wrapper-navleft {
         display: none;
-        width: 100%;
         float: none;
     }
     .wrapper-content-right {
@@ -2737,52 +2732,52 @@ html.w-mod-js *[data-ix="hide-color-logo"] {
         max-width: 100%;
         margin-left: 0px;
         float: none;
-  }
-  .home-values-text-wrapper {
-    font-size: 16px;
-    line-height: 22px;
-  }
-  .home-values-headline {
-    font-size: 16px;
-    line-height: 22px;
-  }
-  .home-usecases-text-wrapper {
-    margin-bottom: 32px;
-    padding-left: 16px;
-  }
-  .margin-0 {
-    margin-right: 0px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-  }
-  .option {
-    display: block;
-  }
-  .option:active {
-    background-color: #e9f9fd;
-  }
-  .wrapper-option {
-    padding: 16px;
-  }
-  .option-icon {
-    margin-right: 16px;
-  }
-  .wrapper-option-text {
-    padding-left: 64px;
-  }
+    }
+    .home-values-text-wrapper {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .home-values-headline {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .home-usecases-text-wrapper {
+        margin-bottom: 32px;
+        padding-left: 16px;
+    }
+    .margin-0 {
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+    }
+    .option {
+        display: block;
+    }
+    .option:active {
+        background-color: #e9f9fd;
+    }
+    .wrapper-option {
+        padding: 16px;
+    }
+    .option-icon {
+        margin-right: 16px;
+    }
+    .wrapper-option-text {
+        padding-left: 64px;
+    }
 }
 @media screen and (max-width: 991px) {
 
-  #notification {
-    display: none !important;
-  }
+    #notification {
+        display: none !important;
+    }
 }
 
 @font-face {
-  font-family: 'Blender Pro';
-  src: url('../fonts/BlenderPro-Bold.ttf') format('truetype'), url('../fonts/BlenderPro-Thin.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
+    font-family: 'Blender Pro';
+    src: url('../fonts/BlenderPro-Bold.ttf') format('truetype'), url('../fonts/BlenderPro-Thin.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
 }
 
 .wrapper-navleft .bs-sidenav img.logo {
