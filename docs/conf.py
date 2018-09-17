@@ -7,7 +7,8 @@ import nengo_sphinx_theme
 
 extensions = [
     "sphinx.ext.autodoc",
-    'sphinx.ext.githubpages',
+    "sphinx.ext.githubpages",
+    "sphinx.ext.mathjax",
     "sphinx.ext.todo",
     "nengo_sphinx_theme",
     "nengo_sphinx_theme.ext.canonical_url",
@@ -32,8 +33,8 @@ todo_include_todos = True
 # -- Options for HTML output --------------------------------------------------
 
 pygments_style = "sphinx"
-templates_path = ["_templates"]
-html_static_path = ["_static"]
+templates_path = []
+html_static_path = []
 
 html_title = "Nengo Sphinx theme v{}".format(release)
 html_theme = "nengo_sphinx_theme"

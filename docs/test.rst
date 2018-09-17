@@ -8,8 +8,8 @@ to make sure everything is displaying correctly.
 This page is based on the `Cloud Sphinx theme's feature test
 <https://cloud-sptheme.readthedocs.io/en/latest/cloud_theme_test.html>`_.
 
-Inline text
-===========
+Text
+====
 
 Inline literal: ``literal text``
 
@@ -21,8 +21,20 @@ Email link: bob@example.com
 
 *Italic text*
 
-Admonition styles
-=================
+Math
+====
+
+Inline math: :math:`a^2 + b^2 = c^2`
+
+Displayed math, with a label:
+
+.. math:: e^{i\pi} + 1 = 0
+   :label: euler
+
+Equation reference: :eq:`euler`
+
+Admonitions
+===========
 
 .. note:: This is a note.
 
@@ -50,8 +62,8 @@ Admonition styles
 
    This was changed.
 
-Code styles
-===========
+Code
+====
 
 Python code block:
 
@@ -111,8 +123,8 @@ Class styling:
 
         execute action, return result.
 
-Table styles
-============
+Tables
+======
 
 .. table:: Normal Table
 
