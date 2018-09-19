@@ -69,39 +69,4 @@
 <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
 <script type="text/javascript" src="https://cdn.crate.io/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 {{- script() }}
-<script>
-  var $navAffix = $('#nav-affix');
-  var $contentEl = $('.wrapper-content-right');
-  // Desktop only
-  if( !$('#mobile-menu-toggler').is(':visible') ) {
-
-    // Only if the content is taller than the sidebar,
-    // to avoid scroll jerk
-    if ( $contentEl.height() > $navAffix.height() ) {
-      // Init
-      $navAffix.affix({
-        offset: {
-          top: 100,
-          bottom: function () {
-            return (this.bottom = $('footer').outerHeight(true) + 200)
-          }
-        }
-      });
-      // Recalculate the sidebar
-      $(window).resize(function() {
-        $navAffix.affix('checkPosition');
-      });
-    }
-
-    $('body').scrollspy();
-
-  } else {
-
-    $('.wrapper-navleft').hide();
-    $('#mobile-menu-toggler').click(function() {
-      $('.wrapper-navleft').toggle();
-    });
-
-  }
-</script>
-{%- endblock %}
+{%- endblock scripts %}
