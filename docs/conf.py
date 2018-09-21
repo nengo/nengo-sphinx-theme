@@ -3,6 +3,8 @@
 # This file is execfile()d with the current directory set
 # to its containing dir.
 
+import os
+
 import nengo_sphinx_theme
 
 extensions = [
@@ -34,10 +36,11 @@ todo_include_todos = True
 
 pygments_style = "sphinx"
 templates_path = []
-html_static_path = []
+html_static_path = ["_static"]
 
 html_title = "Nengo Sphinx theme v{}".format(release)
 html_theme = "nengo_sphinx_theme"
+html_logo = os.path.join("_static", "logo.svg")
 html_sidebars = {"**": ["sidebar.html", "sourcelink.html"]}
 html_last_updated_fmt = ""  # Suppress "Last updated on:" timestamp
 html_theme_options = {
