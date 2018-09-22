@@ -8,8 +8,11 @@ to make sure everything is displaying correctly.
 This page is based on the `Cloud Sphinx theme's feature test
 <https://cloud-sptheme.readthedocs.io/en/latest/cloud_theme_test.html>`_.
 
+Styling
+=======
+
 Text
-====
+----
 
 Inline literal: ``literal text``
 
@@ -22,7 +25,7 @@ Email link: bob@example.com
 *Italic text*
 
 Math
-====
+----
 
 Inline math: :math:`a^2 + b^2 = c^2`
 
@@ -34,7 +37,7 @@ Displayed math, with a label:
 Equation reference: :eq:`euler`
 
 Admonitions
-===========
+-----------
 
 .. note:: This is a note.
 
@@ -63,34 +66,36 @@ Admonitions
    This was changed.
 
 Code
-====
+----
 
-Python code block:
+Python code block with line numbers:
 
 .. code-block:: python
-    :linenos:
+   :linenos:
 
-    >>> import os
+   >>> import os
 
-    >>> os.listdir("/home")
-    ['bread', 'pudding']
+   >>> os.listdir("/home")
+   ['bread', 'pudding']
 
-    >>> os.listdir("/root")
-    Traceback (most recent call last):
-      File "<stdin>", line 1, in <module>
-    OSError: [Errno 13] Permission denied: '/root'
+   >>> os.listdir("/root")
+   Traceback (most recent call last):
+     File "<stdin>", line 1, in <module>
+   OSError: [Errno 13] Permission denied: '/root'
 
 INI code block:
 
 .. code-block:: ini
-    :linenos:
 
-    [rueben]
-    bread = rye
-    meat = corned beef
-    veg = sauerkraut
+   [rueben]
+   bread = rye
+   meat = corned beef
+   veg = sauerkraut
 
-Function styling:
+Documentation
+-------------
+
+Function:
 
 .. function:: frobfunc(foo=1, *, bar=False)
 
@@ -105,7 +110,7 @@ Function styling:
 
     :raises TypeError: if *foo* is out of range
 
-Class styling:
+Class:
 
 .. class:: FrobClass(foo=1, *, bar=False)
 
@@ -124,7 +129,7 @@ Class styling:
         execute action, return result.
 
 Tables
-======
+------
 
 .. table:: Normal Table
 
@@ -148,8 +153,11 @@ Tables
     Row 3       Row 3       Row 3
     =========== =========== ===========
 
-Normal section
-==============
+Extensions
+==========
 
-Child section
--------------
+Versioning
+----------
+
+:doc:`deeply/nested/testing/page`
+versioned links work properly.
