@@ -27,7 +27,7 @@ root = os.path.dirname(os.path.realpath(__file__))
 version_module = imp.load_source(
     "version", os.path.join(root, "nengo_sphinx_theme", "version.py"))
 
-install_requires = ["sphinx"]
+install_requires = ["sphinx>=1.8"]
 
 setup(
     name="nengo-sphinx-theme",

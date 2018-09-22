@@ -14,6 +14,7 @@ extensions = [
     "sphinx.ext.todo",
     "nengo_sphinx_theme",
     "nengo_sphinx_theme.ext.canonical_url",
+    "nengo_sphinx_theme.ext.versions",
 ]
 
 
