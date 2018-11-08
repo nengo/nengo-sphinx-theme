@@ -41,7 +41,7 @@ html_static_path = ["_static"]
 html_title = "Nengo Sphinx theme v{}".format(release)
 html_theme = "nengo_sphinx_theme"
 html_logo = os.path.join("_static", "logo.svg")
-html_sidebars = {"**": ["sidebar.html", "sourcelink.html"]}
+html_sidebars = {"**": ["sidebar.html"]}
 html_last_updated_fmt = ""  # Suppress "Last updated on:" timestamp
 html_theme_options = {
     "hidesidebar": "true",
