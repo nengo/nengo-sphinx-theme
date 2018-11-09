@@ -13,7 +13,6 @@ extensions = [
     "sphinx.ext.mathjax",
     "sphinx.ext.todo",
     "nengo_sphinx_theme",
-    "nengo_sphinx_theme.ext.canonical_url",
     "nengo_sphinx_theme.ext.versions",
 ]
 
@@ -60,9 +59,6 @@ html_theme_options = {
     "navbar_fixed_top": "false",
 
     "globaltoc_includehidden": "true",
-
-    "canonical_url_path": "",
-    "canonical_url": "https://www.nengo.ai/",
 }
 
 # -- Options for LaTeX output -------------------------------------------------
