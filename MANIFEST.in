@@ -4,6 +4,7 @@ include LICENSE
 include NOTICE
 recursive-include docs *.py
 recursive-include docs *.rst
+recursive-include docs *.svg
 recursive-include nengo_sphinx_theme *.conf
 recursive-include nengo_sphinx_theme *.css
 recursive-include nengo_sphinx_theme *.eot
