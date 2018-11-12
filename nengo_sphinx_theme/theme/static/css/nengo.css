@@ -2782,4 +2782,7 @@ html.w-mod-js *[data-ix="hide-color-logo"] {
 
 .wrapper-navleft .bs-sidenav img.logo {
     margin-bottom: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
