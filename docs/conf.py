@@ -53,6 +53,7 @@ html_context = {
     "releases": "404",
 }
 html_theme_options = {
+    "sidebar_logo_width": 100,
 }
 
 # -- Options for LaTeX output -------------------------------------------------
