@@ -19,6 +19,12 @@ extensions = [
 
 # -- sphinx
 nitpicky = True
+nitpick_ignore = [
+    ('py:class', 'int'),
+    ('py:class', 'bool'),
+    ('py:class', 'str'),
+    ('py:exc', 'TypeError'),
+]
 exclude_patterns = ["_build", "**/.ipynb_checkpoints"]
 source_suffix = ".rst"
 source_encoding = "utf-8"
