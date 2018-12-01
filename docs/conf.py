@@ -48,17 +48,6 @@ html_context = {
     "releases": "404",
 }
 html_theme_options = {
-    "hidesidebar": "true",
-
-    # HTML navbar class (Default: "navbar") to attach to <div> element.
-    # For black navbar, do "navbar navbar-inverse"
-    "navbar_class": "navbar navbar-inverse",
-
-    # Fix navigation bar to top of page?
-    # Values: "true" (default) or "false"
-    "navbar_fixed_top": "false",
-
-    "globaltoc_includehidden": "true",
 }
 
 # -- Options for LaTeX output -------------------------------------------------
