@@ -54,6 +54,7 @@ html_context = {
 }
 html_theme_options = {
     "sidebar_logo_width": 100,
+    "sidebar_toc_depth": 4,
 }
 
 # -- Options for LaTeX output -------------------------------------------------
