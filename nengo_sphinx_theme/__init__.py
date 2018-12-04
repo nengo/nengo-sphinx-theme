@@ -1,4 +1,5 @@
 import os
+import warnings
 
 from .version import version as __version__
 
@@ -29,3 +30,18 @@ def setup(app):
     app.add_javascript(os.path.join("js", "mmenu.all.min.js"))
     app.add_javascript(os.path.join("js", "fontawesome.js"))
     app.add_javascript(os.path.join("js", "custom.js"))
+
+    # validate config
+    def validate_config(_, config):
+        html_logo = getattr(config, "html_logo", "")
+        nengo_logo = getattr(config, "html_theme_options", {}).get(
+            "nengo_logo", None)
+
+        if html_logo and nengo_logo:
+            warnings.warn("'html_logo' and 'nengo_logo' are both set; "
+                          "'nengo_logo' will take precedence")
+        elif html_logo:
+            warnings.warn("Logo set using 'html_logo', consider using "
+                          "'nengo_logo' instead")
+
+    app.connect("config-inited", validate_config)
