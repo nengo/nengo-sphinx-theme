@@ -95,4 +95,8 @@ $(document).ready(function() {
       $('.wrapper-navleft').toggle();
     });
   }
+
+  // Sometimes the top navbar gets reordered. Put it back up top, just in case
+  var header = document.querySelector('header.header-nav');
+  document.body.insertBefore(header, document.body.firstChild);
 });
