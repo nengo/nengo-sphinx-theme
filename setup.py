@@ -2,7 +2,6 @@
 import imp
 import io
 import os
-import sys
 
 try:
     from setuptools import find_packages, setup
@@ -40,7 +39,7 @@ setup(
     url="https://github.com/nengo/nengo-sphinx-theme",
     license="Apache v2",
     description="Sphinx theme for Nengo websites",
-    long_description=read("README.rst"),
+    long_description=read("README.rst", "CHANGES.rst"),
     zip_safe=False,
     install_requires=install_requires,
     entry_points={
