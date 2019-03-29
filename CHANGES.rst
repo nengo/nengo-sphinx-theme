@@ -22,12 +22,15 @@ Release History
 0.10.0 (unreleased)
 ===================
 
+**Fixed**
 
+- Added ``body`` class to main div for compatibility with sphinx 2.0.
+  (`#26 <https://github.com/nengo/nengo-sphinx-theme/pull/26>`__)
 
 0.9.0 (March 25, 2019)
 ======================
 
 **Added**
 
-- Added search box to sidebar
-  (`#25 <https://github.com/nengo/nengo-sphinx-theme/pull/25>`_)
+- Added search box to sidebar.
+  (`#25 <https://github.com/nengo/nengo-sphinx-theme/pull/25>`__)
