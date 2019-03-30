@@ -19,8 +19,8 @@ Release History
    - Removed
    - Fixed
 
-0.10.0 (unreleased)
-===================
+0.10.0 (March 30, 2019)
+=======================
 
 **Fixed**
 
