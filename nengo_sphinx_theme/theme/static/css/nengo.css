@@ -179,9 +179,6 @@ body .main-nav .sub-menu li a {
     transition: all 0.25s;
     -webkit-transform-origin: 50% 0%;
     transform-origin: 50% 0%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -191,12 +188,16 @@ body .main-nav .sub-menu li a {
     border-top: 2px solid #6ea6d6;
     -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
     box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+    display: none;
 }
 
 .dropdownBackground.open {
     opacity: 1;
     -webkit-transform: translateY(65px);
     transform: translateY(65px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
 }
 
 .arrow {

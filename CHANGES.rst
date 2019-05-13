@@ -22,7 +22,11 @@ Release History
 0.11.0 (unreleased)
 ===================
 
+**Fixed**
 
+- Fixed an issue in which the dropdown overlay prevented clicks
+  after it had been hidden from mousing outside of it.
+  (`#29 <https://github.com/nengo/nengo-sphinx-theme/pull/29>`__)
 
 0.10.0 (March 30, 2019)
 =======================
