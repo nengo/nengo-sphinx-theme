@@ -22,6 +22,12 @@ Release History
 0.11.0 (unreleased)
 ===================
 
+**Added**
+
+- Added a theme option to enable Google Analytics tracking by
+  providing an ID.
+  (`#30 <https://github.com/nengo/nengo-sphinx-theme/pull/30>`__)
+
 **Fixed**
 
 - Fixed an issue in which the dropdown overlay prevented clicks

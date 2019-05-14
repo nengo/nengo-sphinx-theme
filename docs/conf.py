@@ -3,8 +3,6 @@
 # This file is execfile()d with the current directory set
 # to its containing dir.
 
-import os
-
 import nengo_sphinx_theme
 
 extensions = [
@@ -53,6 +51,7 @@ html_theme_options = {
     "sidebar_logo_width": 100,
     "sidebar_toc_depth": 4,
     "nengo_logo": "general-full-light.svg",
+    "analytics_id": "UA-41658423-2",
 }
 
 # -- Options for LaTeX output -------------------------------------------------

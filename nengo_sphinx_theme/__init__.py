@@ -35,10 +35,11 @@ def setup(app):
 
     # validate config
     def validate_config(_, config):
+        theme_config = getattr(config, "html_theme_options", {})
+
         # check nengo_logo config
         html_logo = getattr(config, "html_logo", "")
-        nengo_logo = getattr(config, "html_theme_options", {}).get(
-            "nengo_logo", None)
+        nengo_logo = theme_config.get("nengo_logo", None)
 
         if html_logo and nengo_logo:
             warnings.warn("'html_logo' and 'nengo_logo' are both set; "
@@ -61,5 +62,11 @@ def setup(app):
         if building == "":
             warnings.warn(
                 "'building_version' not set, versions will not be rendered")
+
+        # check Google Analytics ID
+        analytics_id = theme_config.get("analytics_id", None)
+        if analytics_id is not None and not analytics_id.startswith("UA-"):
+            warnings.warn("'analytics_id' looks strange. It should look like "
+                          "'UA-000000-2'; got %r" % (analytics_id,))
 
     app.connect("config-inited", validate_config)
