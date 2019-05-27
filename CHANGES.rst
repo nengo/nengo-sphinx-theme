@@ -22,7 +22,12 @@ Release History
 0.12.0 (unreleased)
 ===================
 
+**Added**
 
+- Added ``nengo_sphinx_theme.ext.resolvedefaults`` extension that will
+  automatically fill in the value of ``nengo.Default`` values in
+  ``__init__`` signatures.
+  (`#33 <https://github.com/nengo/nengo-sphinx-theme/pull/33>`_)
 
 0.11.0 (May 20, 2019)
 =====================

@@ -170,3 +170,10 @@ Versioning
 
 :doc:`deeply/nested/testing/page`
 versioned links work properly.
+
+Default resolution
+------------------
+
+Autodoc with default resolution:
+
+.. autoclass:: nengo_sphinx_theme.ext.resolvedefaults.TestClass
