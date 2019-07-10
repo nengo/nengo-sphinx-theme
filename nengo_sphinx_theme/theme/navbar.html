@@ -1,109 +1,116 @@
-<header class="header-nav">
-  <div class="container">
-    <div class="navbar w-nav" data-animation="default" data-collapse="small" data-contain="1" data-duration="400">
-      <a class="brand w-nav-brand" href="https://www.nengo.ai/">
-        <img src="https://www.nengo.ai/design/_images/general-full-light.svg" width="120">
-      </a>
-      <nav class="w-nav-menu main-nav" role="navigation">
-        <div class="dropdownBackground">
-          <span class="arrow"></span>
-        </div>
-        <ul id="menu-top-navigation" class="menu">
-          <li class="navlink w-nav-link menu-item menu-item-has-children">
-            <a href="https://www.nengo.ai/overview.html">Overview</a>
-            <ul class="sub-menu">
-                <li class="menu-item"><a href="https://www.nengo.ai/quickstart.html">Quick Start</a></li>
-            </ul>
-          </li>
-          <li class="navlink w-nav-link menu-item menu-item-has-children">
-            <a href="https://www.nengo.ai/documentation.html">Documentation</a>
-            <table class="sub-menu">
-              <tr>
-                <td class="menu-heading">Core</td>
-                <td class="menu-heading">Backends</td>
-                <td class="menu-heading">Add-ons</td>
-              </tr>
-              <tr>
-                <td class="menu-item"><a href="https://www.nengo.ai/nengo">Nengo</a></td>
-                <td class="menu-item"><a href="https://www.nengo.ai/nengo-fpga">Nengo FPGA</a></td>
-                <td class="menu-item"><a href="https://github.com/nengo/nengo-examples">Nengo Examples</a></td>
-              </tr>
-              <tr>
-                <td class="menu-item"><a href="https://www.nengo.ai/nengo-dl/">Nengo DL</a></td>
-                <td class="menu-item"><a href="https://www.nengo.ai/nengo-loihi">Nengo Loihi</a></td>
-                <td class="menu-item"><a href="https://www.nengo.ai/nengo-extras/">Nengo Extras</a></td>
-              </tr>
-              <tr>
-                <td class="menu-item"><a href="https://github.com/nengo/nengo-gui">Nengo GUI</a></td>
-                <td class="menu-item"><a href="https://github.com/nengo/nengo-mpi">Nengo MPI</a></td>
-                <td class="menu-item"><a href="https://arvoelke.github.io/nengolib-docs/">Nengo Lib</a></td>
-              </tr>
-              <tr>
-                <td class="menu-item"><a href="https://www.nengo.ai/nengo-spa/">Nengo SPA</a></td>
-                <td class="menu-item"><a href="https://github.com/nengo/nengo-ocl">Nengo OpenCL</a></td>
-                <td class="menu-item"></td>
-              </tr>
-              <tr>
-                <td class="menu-item"></td>
-                <td class="menu-item"><a href="https://github.com/project-rig/nengo_spinnaker">Nengo SpiNNaker</a></td>
-                <td class="menu-item"></td>
-              </tr>
-            </table>
-          </li>
-          <li class="navlink w-nav-link menu-item menu-item-has-children">
-            <a href="https://www.nengo.ai/community.html">Community</a>
-            <ul class="sub-menu">
-              <li class="menu-item"><a href="https://forum.nengo.ai/">Forum</a></li>
-              <li class="menu-item"><a href="https://www.nengo.ai/publications.html">Publications</a></li>
-              <li class="menu-item"><a href="https://www.nengo.ai/summerschool.html">Summer School</a></li>
-              <li class="menu-item"><a href="https://www.nengo.ai/videos.html">Videos</a></li>
-              <li class="menu-item"><a href="https://www.nengo.ai/people.html">People</a></li>
-            </ul>
-          </li>
-          <li class="navlink w-nav-link menu-item menu-item-has-children">
-            <a href="https://www.nengo.ai/projects.html">Development</a>
-            <ul class="sub-menu">
-              <li class="menu-item"><a href="https://www.nengo.ai/contributing.html">Contributor Guide</a></li>
-              <li class="menu-item"><a href="https://www.nengo.ai/projects.html">Ecosystem</a></li>
-            </ul>
-          </li>
-          <li class="navlink w-nav-link menu-item"><a href="https://www.nengo.ai/README.html">About</a></li>
-          <li class="btn-link w-nav-link menu-item"><a href="https://www.nengo.ai/download.html">Download</a></li>
-        </ul>
-      </nav>
+{% set projects = [
+  ("Nengo Core", "https://www.nengo.ai/nengo/"),
+  ("Nengo GUI", "https://github.com/nengo/nengo-gui/"),
+  ("Nengo DL", "https://www.nengo.ai/nengo-dl/"),
+  ("divider", None),
+  ("Nengo SPA", "https://www.nengo.ai/nengo-spa/"),
+  ("Nengo Extras", "https://www.nengo.ai/nengo-extras/"),
+  ("Nengolib", "https://arvoelke.github.io/nengolib-docs/"),
+  ("Nengo Examples", "https://github.com/nengo/nengo-examples/"),
+  ("divider", None),
+  ("Nengo FPGA", "https://www.nengo.ai/nengo-fpga/"),
+  ("Nengo Loihi", "https://www.nengo.ai/nengo-loihi/"),
+  ("Nengo OpenCL", "https://github.com/nengo/nengo-ocl"),
+  ("Nengo SpiNNaker", "https://github.com/project-rig/nengo_spinnaker"),
+  ("Nengo MPI", "https://github.com/nengo/nengo-mpi"),
+] %}
 
-      <div id="mobile-nav" class="mm-menu">
-        <ul class="offcanvas-menu">
-          <li class="navlink w-nav-link menu-item"><a href="https://www.nengo.ai/overview.html">Overview</a></li>
-          <li class="navlink w-nav-link menu-item menu-item-has-children">
-            <a href="https://www.nengo.ai/documentation.html">Documentation</a>
-            <ul class="sub-menu">
-              <li class="menu-item"><a href="https://www.nengo.ai/quickstart.html">Quick Start</a></li>
-              <li class="menu-item"><a href="http://www.nengo.ai/nengo">NengoCore</a></li>
-              <li class="menu-item"><a href="https://github.com/nengo/nengo-gui#nengo-gui">NengoGUI</a></li>
-            </ul>
-          </li>
-          <li class="navlink w-nav-link menu-item menu-item-has-children">
-            <a href="https://www.nengo.ai/community.html">Community</a>
-            <ul class="sub-menu">
-              <li class="menu-item"><a href="https://forum.nengo.ai/">Forum</a></li>
-              <li class="menu-item"><a href="https://www.nengo.ai/summerschool.html">Summer School</a></li>
-              <li class="menu-item"><a href="https://www.nengo.ai/people.html">People</a></li>
-            </ul>
-          </li>
-          <li class="navlink w-nav-link menu-item menu-item-has-children">
-            <a href="https://www.nengo.ai/projects.html">Development</a>
-            <ul class="sub-menu">
-              <li class="menu-item"><a href="https://www.nengo.ai/contributing.html">Contributor Guide</a></li>
-              <li class="menu-item"><a href="https://www.nengo.ai/projects.html">Ecosystem</a></li>
-            </ul>
-          </li>
-          <li class="navlink w-nav-link menu-item"><a href="https://www.nengo.ai/README.html">About</a></li>
-          <li class="btn-link w-nav-link menu-item"><a href="https://www.nengo.ai/download.html">Download</a></li>
-        </ul>
-      </div>
-
-      <a href="#mobile-nav" class="fa fa-bars mobile-nav-button"></a>
+<header class="fixed-top header-top shadow-sm">
+  <nav class="navbar navbar-expand-md navbar-light bg-white">
+    <a class="navbar-brand" href="https://www.nengo.ai">
+      <img
+        src="https://www.nengo.ai/design/_images/general-full-light.svg"
+        alt="Nengo"
+        class="logo"
+      />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbar-collapse"
+      aria-controls="navbar-collapse"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.nengo.ai">What is Nengo?</a>
+        </li>
+        <li class="nav-item dropdown active">
+          <a
+            class="nav-link dropdown-toggle"
+            id="navbar-dropdown-docs"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            href="#"
+            >Documentation</a
+          >
+          <div
+            class="dropdown-menu shadow-lg border-0"
+            aria-labelledby="navbar-dropdown-docs"
+          >
+            {% for name, url in projects %}
+              {%- if name == "divider" %}
+            <div class="dropdown-divider"></div>
+              {%- else %}
+            <a class="dropdown-item" href="{{ url }}">{{ name }}</a>
+              {%- endif %}
+            {%- endfor %}
+            <a class="dropdown-item" href="https://www.nengo.ai/documentation"
+              >All documentation</a
+            >
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            id="navbar-dropdown-community"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            href="#"
+            >Community</a
+          >
+          <div
+            class="dropdown-menu shadow-lg border-0"
+            aria-labelledby="navbar-dropdown-community"
+          >
+            <a class="dropdown-item" href="https://forum.nengo.ai">Forum</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://www.nengo.ai/people"
+              >People</a
+            >
+            <a class="dropdown-item" href="https://www.nengo.ai/summer-school"
+              >Summer school</a
+            >
+            <a class="dropdown-item" href="https://www.nengo.ai/contributing"
+              >Contributing</a
+            >
+            <a class="dropdown-item" href="https://www.nengo.ai/publications"
+              >Publications</a
+            >
+            <a class="dropdown-item" href="https://www.nengo.ai/videos"
+              >Videos</a
+            >
+            <a class="dropdown-item" href="https://www.nengo.ai/conduct"
+              >Code of conduct</a
+            >
+            <a class="dropdown-item" href="https://www.nengo.ai/caa">CAA</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link btn btn-success btn-sm text-white"
+            href="https://www.nengo.ai/download"
+            >Download</a
+          >
+        </li>
+      </ul>
     </div>
-  </div>
+  </nav>
 </header>

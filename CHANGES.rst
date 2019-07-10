@@ -19,10 +19,15 @@ Release History
    - Removed
    - Fixed
 
-0.13.0 (unreleased)
-===================
+1.0.0 (unreleased)
+==================
 
+**Changed**
 
+- The look-and-feel of the theme was completely redone.
+  (`#35 <https://github.com/nengo/nengo-sphinx-theme/pull/35>`__)
+- This project is now licensed with the Nengo license.
+  (`#35 <https://github.com/nengo/nengo-sphinx-theme/pull/35>`__)
 
 0.12.0 (May 29, 2019)
 =====================

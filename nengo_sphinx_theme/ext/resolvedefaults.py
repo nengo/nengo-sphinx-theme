@@ -29,16 +29,15 @@ def resolve_default(cls, arg, value):
         for param in (getattr(cls, name) for name in iter_params(cls)):
             if param.name == arg:
                 return DisplayDefault(param.default)
-        else:
-            warnings.warn(
-                "Default value for argument {} of {} could not be "
-                "resolved.".format(arg, cls)
-            )
-            return value
+        warnings.warn(
+            "Default value for argument {} of {} could not be "
+            "resolved.".format(arg, cls)
+        )
+        return value
 
 
 def autodoc_defaults(
-    app, what, name, obj, options, signature, return_annotation
+        app, what, name, obj, options, signature, return_annotation
 ):
     if what != "class":
         return signature, return_annotation
@@ -50,6 +49,7 @@ def autodoc_defaults(
         ]
     else:
         defaults = None
+    # pylint: disable=deprecated-method
     return (
         inspect.formatargspec(
             spec.args,

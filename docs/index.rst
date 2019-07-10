@@ -4,4 +4,7 @@ Nengo Sphinx theme
 
 .. toctree::
 
-   test
+   style
+   extensions
+   sidebar
+   notebook

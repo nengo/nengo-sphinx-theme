@@ -19,3 +19,5 @@ htmlcov
 .idea
 .pytest_cache/
 .doctrees/
+.ci/
+.ipynb_checkpoints/

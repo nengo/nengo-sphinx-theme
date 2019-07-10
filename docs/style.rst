@@ -1,31 +1,31 @@
-************
-Feature test
-************
+***********
+Style tests
+***********
 
-This page contains examples of various features of the Nengo theme.
+This page contains examples of the styles used in the Nengo theme.
 It is mainly useful for internal testing
 to make sure everything is displaying correctly.
 This page is based on the `Cloud Sphinx theme's feature test
 <https://cloud-sptheme.readthedocs.io/en/latest/cloud_theme_test.html>`_.
 
-Styling
+Heading
 =======
 
-Sub-headings
-------------
+Sub-heading
+-----------
 
-Sub-sub-headings
-^^^^^^^^^^^^^^^^
+Sub-sub-heading
+^^^^^^^^^^^^^^^
 
-Sub-sub-sub-headings
-####################
+Sub-sub-sub-heading
+###################
 
 Text
-----
+====
 
 Inline literal: ``literal text``
 
-External link: `<http://www.google.com>`_
+External link: `<https://www.nengo.ai/>`_
 
 Email link: bob@example.com
 
@@ -34,7 +34,7 @@ Email link: bob@example.com
 *Italic text*
 
 Math
-----
+====
 
 Inline math: :math:`a^2 + b^2 = c^2`
 
@@ -46,7 +46,7 @@ Displayed math, with a label:
 Equation reference: :eq:`euler`
 
 Admonitions
------------
+===========
 
 .. note:: This is a note.
 
@@ -75,7 +75,7 @@ Admonitions
    This was changed.
 
 Code
-----
+====
 
 Python code block with line numbers:
 
@@ -96,13 +96,13 @@ INI code block:
 
 .. code-block:: ini
 
-   [rueben]
+   [reuben]
    bread = rye
    meat = corned beef
    veg = sauerkraut
 
 Documentation
--------------
+=============
 
 Function:
 
@@ -138,42 +138,14 @@ Class:
         execute action, return result.
 
 Tables
-------
+======
 
-.. table:: Normal Table
+.. table:: Table caption
 
-    =========== =========== ===========
-    Header1     Header2     Header3
-    =========== =========== ===========
-    Row 1       Row 1       Row 1
-    Row 2       Row 2       Row 2
-    Row 3       Row 3       Row 3
-    =========== =========== ===========
-
-.. rst-class:: fullwidth
-
-.. table:: Full Width Table
-
-    =========== =========== ===========
-    Header1     Header2     Header3
-    =========== =========== ===========
-    Row 1       Row 1       Row 1
-    Row 2       Row 2       Row 2
-    Row 3       Row 3       Row 3
-    =========== =========== ===========
-
-Extensions
-==========
-
-Versioning
-----------
-
-:doc:`deeply/nested/testing/page`
-versioned links work properly.
-
-Default resolution
-------------------
-
-Autodoc with default resolution:
-
-.. autoclass:: nengo_sphinx_theme.ext.resolvedefaults.TestClass
+   =========== =========== ===========
+   Header1     Header2     Header3
+   =========== =========== ===========
+   Row 1       Row 1       Row 1
+   Row 2       Row 2       Row 2
+   Row 3       Row 3       Row 3
+   =========== =========== ===========
