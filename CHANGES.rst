@@ -19,6 +19,13 @@ Release History
    - Removed
    - Fixed
 
+1.0.1 (July 16, 2019)
+=====================
+
+**Changed**
+
+- Fixed a missing divider in the documentation drop-down menu.
+
 1.0.0 (July 16, 2019)
 =====================
 
