@@ -36,16 +36,14 @@ def resolve_default(cls, arg, value):
         return value
 
 
-def autodoc_defaults(
-        app, what, name, obj, options, signature, return_annotation
-):
+def autodoc_defaults(app, what, name, obj, options, signature, return_annotation):
     if what != "class":
         return signature, return_annotation
     spec = inspect.getfullargspec(obj.__init__)
     if spec.defaults is not None:
         defaults = [
             resolve_default(obj, arg, d)
-            for arg, d in zip(spec.args[-len(spec.defaults):], spec.defaults)
+            for arg, d in zip(spec.args[-len(spec.defaults) :], spec.defaults)
         ]
     else:
         defaults = None
