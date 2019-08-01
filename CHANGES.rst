@@ -22,7 +22,11 @@ Release History
 1.0.2 (unreleased)
 ==================
 
+**Fixed**
 
+- Fixed the search box, which was hanging for many search terms.
+  (`#28 <https://github.com/nengo/nengo-sphinx-theme/issues/28>`__,
+  `#39 <https://github.com/nengo/nengo-sphinx-theme/pull/39>`__)
 
 1.0.1 (July 16, 2019)
 =====================
