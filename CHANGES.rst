@@ -19,8 +19,8 @@ Release History
    - Removed
    - Fixed
 
-1.0.3 (unreleased)
-==================
+1.0.3 (September 13, 2019)
+==========================
 
 - Updated header and footer to match changes to nengo.ai.
   (`#41 <https://github.com/nengo/nengo-sphinx-theme/pull/41>`__)
