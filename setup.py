@@ -32,7 +32,7 @@ version = runpy.run_path(os.path.join(root, "nengo_sphinx_theme", "version.py"))
 ]
 
 install_req = ["sphinx>=1.8"]
-docs_req = ["jupyter", "matplotlib", "nbsphinx", "nengo"]
+docs_req = ["jupyter", "matplotlib", "nbsphinx", "nengo", "numpydoc"]
 optional_req = []
 tests_req = []
 

@@ -43,6 +43,7 @@ setup_py:
     - matplotlib
     - nbsphinx
     - nengo
+    - numpydoc
   classifiers:
     - "Development Status :: 4 - Beta"
     - "Framework :: Nengo"

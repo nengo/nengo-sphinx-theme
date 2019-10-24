@@ -119,6 +119,30 @@ Function:
 
     :raises TypeError: if *foo* is out of range
 
+Function documented with NumPyDoc:
+
+.. np:function:: frobfunc(foo=1, *, bar=False)
+
+    Parameters
+    ----------
+
+    foo : int
+        foobinate strength
+    bar : bool
+        enabled barring.
+
+        Barring requires a second paragraph.
+
+    Returns
+    -------
+    str
+        frobbed return
+
+    Raises
+    ------
+    TypeError
+        if *foo* is out of range
+
 Class:
 
 .. class:: FrobClass(foo=1, *, bar=False)
