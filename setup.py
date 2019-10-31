@@ -31,8 +31,16 @@ version = runpy.run_path(os.path.join(root, "nengo_sphinx_theme", "version.py"))
     "version"
 ]
 
-install_req = ["sphinx>=1.8"]
-docs_req = ["jupyter", "matplotlib", "nbsphinx", "nengo", "numpydoc"]
+install_req = [
+    "sphinx>=1.8",
+]
+docs_req = [
+    "jupyter",
+    "matplotlib",
+    "nbsphinx",
+    "nengo",
+    "numpydoc",
+]
 optional_req = []
 tests_req = []
 
@@ -56,7 +64,7 @@ setup(
         "tests": tests_req,
     },
     python_requires=">=3.5",
-    entry_points={"sphinx.html_themes": ["nengo_sphinx_theme=nengo_sphinx_theme"]},
+    entry_points={"sphinx.html_themes": ["nengo_sphinx_theme=nengo_sphinx_theme",],},
     classifiers=[
         "Development Status :: 4 - Beta",
         "Framework :: Nengo",

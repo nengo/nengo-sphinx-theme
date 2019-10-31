@@ -23,3 +23,19 @@ to the ``extensions`` list in ``conf.py``.
 Autodoc with default resolution:
 
 .. autoclass:: nengo_sphinx_theme.ext.resolvedefaults.TestClass
+
+AutoAutoSummary
+===============
+
+.. automodule:: nengo_sphinx_theme.ext.autoautosummary
+
+   .. autoautosummary:: nengo_sphinx_theme.ext.autoautosummary
+      :exclude-members: setup
+
+.. autoclass:: nengo_sphinx_theme.ext.autoautosummary.TestClass
+   :private-members:
+
+   .. autoautosummary:: nengo_sphinx_theme.ext.autoautosummary.TestClass
+      :nosignatures:
+
+      nengo_sphinx_theme.ext.autoautosummary.TestClass._another_private_method

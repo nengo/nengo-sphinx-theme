@@ -67,6 +67,7 @@ docs_conf_py:
     - examples/test-example.ipynb
   extensions:
     - nengo_sphinx_theme.ext.resolvedefaults
+    - nengo_sphinx_theme.ext.autoautosummary
   analytics_id: UA-41658423-2
 
 pre_commit_config_yaml: {}

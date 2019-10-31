@@ -19,13 +19,19 @@ Release History
    - Removed
    - Fixed
 
-1.0.4 (unreleased)
+1.1.0 (unreleased)
 ==================
 
+**Added**
 
+- Added an extension with the ``AutoAutoSummary`` directive, which will
+  automatically generate Sphinx AutoSummaries for modules and classes.
+  (`#45 <https://github.com/nengo/nengo-sphinx-theme/pull/45>`__)
 
 1.0.3 (September 13, 2019)
 ==========================
+
+**Changed**
 
 - Updated header and footer to match changes to nengo.ai.
   (`#41 <https://github.com/nengo/nengo-sphinx-theme/pull/41>`__)
