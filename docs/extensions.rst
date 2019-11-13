@@ -39,3 +39,12 @@ AutoAutoSummary
       :nosignatures:
 
       nengo_sphinx_theme.ext.autoautosummary.TestClass._another_private_method
+
+Redirects
+=========
+
+.. automodule:: nengo_sphinx_theme.ext.redirects
+   :no-members:
+
+The following page should redirect to the
+`deeply nested testing page <redirect/to/nested-page.html>`_.

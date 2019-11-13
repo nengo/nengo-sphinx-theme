@@ -17,6 +17,7 @@ extensions = [
     "sphinx.ext.viewcode",
     "nbsphinx",
     "nengo_sphinx_theme",
+    "nengo_sphinx_theme.ext.redirects",
     "numpydoc",
     "nengo_sphinx_theme.ext.resolvedefaults",
     "nengo_sphinx_theme.ext.autoautosummary",
@@ -84,3 +85,6 @@ html_theme_options = {
     "nengo_logo_color": "#a8acaf",
     "analytics_id": "UA-41658423-2",
 }
+html_redirects = [
+    ("redirect/to/nested-page.html", "deeply/nested/testing/page.html"),
+]

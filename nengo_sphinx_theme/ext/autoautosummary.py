@@ -1,5 +1,8 @@
 """
 This extension automatically generates AutoSummaries for modules/classes.
+
+This extension can be enabled by adding ``"nengo_sphinx_theme.ext.autoautosummary"``
+to the ``extensions`` list in ``conf.py``.
 """
 
 import inspect

@@ -22,7 +22,10 @@ Release History
 1.1.1 (unreleased)
 ==================
 
+**Added**
 
+- Added an extension to handle redirecting old HTML pages to new ones.
+  (`#48 <https://github.com/nengo/nengo-sphinx-theme/pull/48>`__)
 
 1.1.0 (November 5, 2019)
 ========================
