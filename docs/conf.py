@@ -49,6 +49,14 @@ numpydoc_show_class_members = False
 # -- nbsphinx
 nbsphinx_timeout = -1
 
+# -- nengo_sphinx_theme.ext.autoautosummary
+autoautosummary_change_modules = {
+    "nengo_sphinx_theme.ext.renamed_autoautosummary": [
+        "nengo_sphinx_theme.ext.autoautosummary.TestClass",
+        "nengo_sphinx_theme.ext.autoautosummary.a_test_function",
+    ],
+}
+
 # -- sphinx
 nitpicky = True
 exclude_patterns = [

@@ -8,6 +8,7 @@ to the ``extensions`` list in ``conf.py``.
 import inspect
 
 from docutils.parsers.rst import directives
+import sphinx.ext.autodoc as autodoc
 import sphinx.ext.autosummary as autosummary
 
 # We import nengo_sphinx_theme here to test the issue that
@@ -57,7 +58,7 @@ class AutoAutoSummary(autosummary.Autosummary):
     """
 
     option_spec = {
-        "nosignatures": directives.unchanged,
+        **autosummary.Autosummary.option_spec,
         "exclude-members": directives.unchanged,
     }
 
@@ -99,18 +100,43 @@ class AutoAutoSummary(autosummary.Autosummary):
         return items
 
     def run(self):
-        clazz = str(self.arguments[0])
-        (module_name, obj_name) = clazz.rsplit(".", 1)
+        fullname = str(self.arguments[0])
+        (module_name, obj_name) = fullname.rsplit(".", 1)
         mod = __import__(module_name, globals(), locals(), [obj_name])
         obj = getattr(mod, obj_name)
 
-        new_content = ["%s.%s" % (clazz, item) for item in self.get_members(obj)]
+        # cast from "ViewList" to regular list
+        self.content = list(self.content)
 
-        if inspect.isclass(obj):
-            # add the class itself
-            new_content = [clazz] + new_content
+        # add all members of object to the autosummary (with renaming)
+        for item in self.get_members(obj):
+            if inspect.ismodule(obj):
+                # the renaming is on the level of module objects (e.g., classes),
+                # so add the object name before doing the name lookup
+                item_name = "%s.%s" % (fullname, item)
 
-        self.content = new_content + self.content.data
+                # look up any renaming, defaulting to the current module name
+                renamed_module = self.env.config["autoautosummary_change_modules"].get(
+                    item_name, fullname
+                )
+
+                # add the item name to the (renamed) module
+                member_name = "%s.%s" % (renamed_module, item)
+            else:
+                # obj is already a renameable object (e.g. a class), so we're just
+                # looking up based on fullname
+                item_name = fullname
+
+                # default to module_name (since the output of rename lookup should be
+                # a module, whereas fullname would be a class)
+                renamed_module = self.env.config["autoautosummary_change_modules"].get(
+                    item_name, module_name
+                )
+
+                # add class and member name to renamed module
+                member_name = "%s.%s.%s" % (renamed_module, obj_name, item)
+
+            self.content.append(member_name)
 
         return super(AutoAutoSummary, self).run()
 
@@ -121,13 +147,78 @@ def patch_autosummary_import_by_name():
     orig_f = autosummary.import_by_name
 
     def import_by_name(name, prefixes):
-        # Filter out problematic prefixes
-        prefixes = [p for p in prefixes if p is None or not name.startswith(p)]
+        # We currently do not support prefixes, because they can cause cycles. If we
+        # need this in the future, we can go back to filtering problematic prefixes.
+        prefixes = [None]
         return orig_f(name, prefixes)
 
     autosummary.import_by_name = import_by_name
 
 
+class RenameMixin:
+    """Mixin for adding renaming functionality to autodocumenters."""
+
+    def add_directive_header(self, sig):
+        """
+        Change the modname so that ``:module: renamed_module`` is added in the header.
+        """
+
+        modname = self.modname
+
+        if self.objtype == "method":
+            # drop method name (since renames are by class)
+            lookup_name = ".".join(self.fullname.split(".")[:-1])
+        else:
+            lookup_name = self.fullname
+
+        self.modname = self.env.config["autoautosummary_change_modules"].get(
+            lookup_name, modname
+        )
+
+        super().add_directive_header(sig)
+
+        # set the modname back to the "true" modname, since other parts of the
+        # rendering process may depend on that
+        self.modname = modname
+
+
+class RenameClassDocumenter(RenameMixin, autodoc.ClassDocumenter):
+    """Class autodocumenter with optional renaming."""
+
+
+class RenameFunctionDocumenter(RenameMixin, autodoc.FunctionDocumenter):
+    """Function autodocumenter with optional renaming."""
+
+
+class RenameExceptionDocumenter(RenameMixin, autodoc.ExceptionDocumenter):
+    """Exception autodocumenter with optional renaming."""
+
+
+class RenameDecoratorDocumenter(RenameMixin, autodoc.DecoratorDocumenter):
+    """Decorator autodocumenter with optional renaming."""
+
+
+class RenameMethodDocumenter(RenameMixin, autodoc.MethodDocumenter):
+    """Method autodocumenter with optional renaming."""
+
+
 def setup(app):
     patch_autosummary_import_by_name()
     app.add_directive("autoautosummary", AutoAutoSummary)
+
+    app.add_config_value("autoautosummary_change_modules", {}, "")
+
+    def swap_config(app, config):
+        # change from mod: items to {item: mod, item: mod, ...}
+        swapped = {}
+        for mod, items in config["autoautosummary_change_modules"].items():
+            swapped.update((x, mod) for x in items)
+        config["autoautosummary_change_modules"] = swapped
+
+    app.connect("config-inited", swap_config)
+
+    app.add_autodocumenter(RenameClassDocumenter, override=True)
+    app.add_autodocumenter(RenameFunctionDocumenter, override=True)
+    app.add_autodocumenter(RenameExceptionDocumenter, override=True)
+    app.add_autodocumenter(RenameDecoratorDocumenter, override=True)
+    app.add_autodocumenter(RenameMethodDocumenter, override=True)

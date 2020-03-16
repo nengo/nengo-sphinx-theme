@@ -71,6 +71,10 @@ docs_conf_py:
   analytics_id: UA-41658423-2
   html_redirects:
     redirect/to/nested-page.html: deeply/nested/testing/page.html
+  autoautosummary_change_modules:
+    nengo_sphinx_theme.ext.renamed_autoautosummary:
+      - nengo_sphinx_theme.ext.autoautosummary.TestClass
+      - nengo_sphinx_theme.ext.autoautosummary.a_test_function
 
 pre_commit_config_yaml: {}
 

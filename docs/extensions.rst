@@ -38,7 +38,7 @@ AutoAutoSummary
    .. autoautosummary:: nengo_sphinx_theme.ext.autoautosummary.TestClass
       :nosignatures:
 
-      nengo_sphinx_theme.ext.autoautosummary.TestClass._another_private_method
+      nengo_sphinx_theme.ext.renamed_autoautosummary.TestClass._another_private_method
 
 Redirects
 =========

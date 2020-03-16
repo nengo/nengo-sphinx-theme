@@ -22,6 +22,12 @@ Release History
 1.2.1 (unreleased)
 ==================
 
+**Added**
+
+- Added the ``autoautosummary_change_modules`` config option to
+  ``nengo_sphinx_theme.ext.autoautosummary``, which allows classes/functions
+  documented with ``autoautosummary`` or ``automodule`` to be moved to a different
+  nominal namespace. (`#52 <https://github.com/nengo/nengo-sphinx-theme/pull/52>`__)
 
 1.2.0 (November 14, 2019)
 =========================
