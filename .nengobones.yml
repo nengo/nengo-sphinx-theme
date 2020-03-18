@@ -14,6 +14,7 @@ travis_yml:
   deploy_dists:
     - sdist
     - bdist_wheel
+  bones_install: git+https://github.com/nengo/nengo-bones@linkchecker
 
 ci_scripts:
   - template: static
