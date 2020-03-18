@@ -28,6 +28,9 @@ Release History
   ``nengo_sphinx_theme.ext.autoautosummary``, which allows classes/functions
   documented with ``autoautosummary`` or ``automodule`` to be moved to a different
   nominal namespace. (`#52 <https://github.com/nengo/nengo-sphinx-theme/pull/52>`__)
+- Added ``nengo_sphinx_theme.ext.backoff``, which monkeypatches the Sphinx
+  HTTP request functionality to add exponential backoff.
+  (`#53 <https://github.com/nengo/nengo-sphinx-theme/pull/53>`__)
 
 1.2.0 (November 14, 2019)
 =========================

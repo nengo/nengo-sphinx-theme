@@ -17,6 +17,7 @@ extensions = [
     "sphinx.ext.viewcode",
     "nbsphinx",
     "nengo_sphinx_theme",
+    "nengo_sphinx_theme.ext.backoff",
     "nengo_sphinx_theme.ext.redirects",
     "numpydoc",
     "nengo_sphinx_theme.ext.resolvedefaults",
@@ -72,6 +73,7 @@ linkcheck_ignore = [r"http://localhost:\d+"]
 linkcheck_anchors = True
 default_role = "py:obj"
 pygments_style = "sphinx"
+user_agent = "nengo_sphinx_theme"
 
 project = "Nengo Sphinx Theme"
 authors = "Applied Brain Research"

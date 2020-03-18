@@ -48,3 +48,8 @@ Redirects
 
 The following page should redirect to the
 `deeply nested testing page <redirect/to/nested-page.html>`_.
+
+Backoff
+=======
+
+.. automodule:: nengo_sphinx_theme.ext.backoff
