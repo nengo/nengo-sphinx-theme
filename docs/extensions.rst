@@ -48,3 +48,14 @@ Redirects
 
 The following page should redirect to the
 `deeply nested testing page <redirect/to/nested-page.html>`_.
+
+Unique linkchecker
+==================
+
+.. automodule:: nengo_sphinx_theme.ext.unique_linkcheck
+
+These multiple links should only generate one request:
+
+- https://www.nengo.ai/
+- https://www.nengo.ai/
+- https://www.nengo.ai/

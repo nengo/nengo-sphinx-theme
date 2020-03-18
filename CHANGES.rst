@@ -22,6 +22,9 @@ Release History
 1.2.1 (unreleased)
 ==================
 
+- Added ``nengo_sphinx_theme.ext.unique_linkcheck``, a version of the builtin
+  Sphinx linkchecker that only checks unique URLs.
+  (`#53 <https://github.com/nengo/nengo-sphinx-theme/pull/53>`__)
 
 1.2.0 (November 14, 2019)
 =========================
