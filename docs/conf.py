@@ -77,7 +77,7 @@ user_agent = "nengo_sphinx_theme"
 
 project = "Nengo Sphinx Theme"
 authors = "Applied Brain Research"
-copyright = "2019-2019 Applied Brain Research"
+copyright = "2019-2020 Applied Brain Research"
 version = ".".join(nengo_sphinx_theme.__version__.split(".")[:2])  # Short X.Y version
 release = nengo_sphinx_theme.__version__  # Full version, with tags
 
