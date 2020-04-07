@@ -22,6 +22,11 @@ Release History
 1.2.2 (unreleased)
 ==================
 
+**Fixed**
+
+- ``nengo_sphinx_theme.ext.resolvedefaults`` will not touch signatures unless they
+  contain a ``Default`` value.
+  (`#54 <https://github.com/nengo/nengo-sphinx-theme/pull/54>`__)
 
 1.2.1 (March 19, 2019)
 ======================
@@ -34,7 +39,7 @@ Release History
   nominal namespace. (`#52 <https://github.com/nengo/nengo-sphinx-theme/pull/52>`__)
 - Added ``nengo_sphinx_theme.ext.backoff``, which monkeypatches the Sphinx
   HTTP request functionality to add exponential backoff.
-  (`#53 <https://github.com/nengo/nengo-sphinx-theme/pull/53>`__)
+  (`#52 <https://github.com/nengo/nengo-sphinx-theme/pull/52>`__)
 
 1.2.0 (November 14, 2019)
 =========================

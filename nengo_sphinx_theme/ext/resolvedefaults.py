@@ -38,15 +38,17 @@ def resolve_default(cls, arg, value):
 
 def autodoc_defaults(app, what, name, obj, options, signature, return_annotation):
     if what != "class":
-        return signature, return_annotation
+        return None
     spec = inspect.getfullargspec(obj.__init__)
-    if spec.defaults is not None:
-        defaults = [
-            resolve_default(obj, arg, d)
-            for arg, d in zip(spec.args[-len(spec.defaults) :], spec.defaults)
-        ]
-    else:
-        defaults = None
+
+    if spec.defaults is None or not any(val is Default for val in spec.defaults):
+        return None
+
+    defaults = [
+        resolve_default(obj, arg, d)
+        for arg, d in zip(spec.args[-len(spec.defaults) :], spec.defaults)
+    ]
+
     # pylint: disable=deprecated-method
     return (
         inspect.formatargspec(
