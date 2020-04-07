@@ -74,6 +74,7 @@ linkcheck_anchors = True
 default_role = "py:obj"
 pygments_style = "sphinx"
 user_agent = "nengo_sphinx_theme"
+autodoc_typehints = "none"
 
 project = "Nengo Sphinx Theme"
 authors = "Applied Brain Research"
