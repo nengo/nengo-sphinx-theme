@@ -28,6 +28,7 @@ AutoAutoSummary
 ===============
 
 .. automodule:: nengo_sphinx_theme.ext.autoautosummary
+   :exclude-members: TestClass
 
    .. autoautosummary:: nengo_sphinx_theme.ext.autoautosummary
       :exclude-members: setup

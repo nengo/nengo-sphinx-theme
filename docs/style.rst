@@ -121,7 +121,7 @@ Function:
 
 Function documented with NumPyDoc:
 
-.. np:function:: frobfunc(foo=1, *, bar=False)
+.. np:function:: npfrobfunc(foo=1, *, bar=False)
 
     Parameters
     ----------
