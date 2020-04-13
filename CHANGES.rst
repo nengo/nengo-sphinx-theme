@@ -31,6 +31,9 @@ Release History
 - ``nengo_sphinx_theme.ext.resolvedefaults`` will not touch signatures unless they
   contain a ``Default`` value.
   (`#54 <https://github.com/nengo/nengo-sphinx-theme/pull/54>`__)
+- ``nengo_sphinx_theme.ext.resolvedefaults`` will also resolve module objects to the
+  module name (rather than the file path).
+  (`#57 <https://github.com/nengo/nengo-sphinx-theme/pull/57>`__)
 
 1.2.1 (March 19, 2019)
 ======================

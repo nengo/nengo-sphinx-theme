@@ -32,7 +32,7 @@ version = runpy.run_path(os.path.join(root, "nengo_sphinx_theme", "version.py"))
 ]
 
 install_req = [
-    "sphinx>=1.8",
+    "sphinx>=3.0.0",
     "backoff>=1.10.0",
 ]
 docs_req = [

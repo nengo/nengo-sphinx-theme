@@ -22,7 +22,15 @@ to the ``extensions`` list in ``conf.py``.
 
 Autodoc with default resolution:
 
+.. autofunction:: nengo_sphinx_theme.ext.resolvedefaults.test_func
+
 .. autoclass:: nengo_sphinx_theme.ext.resolvedefaults.TestClass
+
+Test built-in functions and classes:
+
+.. autofunction:: nengo_sphinx_theme.ext.resolvedefaults.test_builtin_func
+
+.. autoclass:: nengo_sphinx_theme.ext.resolvedefaults.TestBuiltinClass
 
 AutoAutoSummary
 ===============
