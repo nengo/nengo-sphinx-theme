@@ -33,6 +33,8 @@ Email link: bob@example.com
 
 *Italic text*
 
+Sphinx reference: `.FrobClass`
+
 Math
 ====
 
