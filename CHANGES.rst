@@ -22,6 +22,13 @@ Release History
 20.5 (unreleased)
 =================
 
+**Fixed**
+
+- Versions listed in the dropdown will now be sorted correctly by number rather than
+  string (e.g. 1.10 will come after 1.2). (`#58`_)
+- Remove empty lines from version dropdown. (`#58`_)
+
+.. _#58: https://github.com/nengo/nengo-sphinx-theme/pull/58
 
 1.2.2 (April 14, 2020)
 ======================

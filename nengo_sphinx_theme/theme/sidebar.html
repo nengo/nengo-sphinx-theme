@@ -31,7 +31,7 @@
         {% else %}
         <option value="{{ prefix }}../{{ pagename }}.html">latest</option>
         {% endif %}
-        {% for release in releases.split(",") | sort(True) %}
+        {% for release in releases | sort_versions %}
           {% if building_version == release %}
         <option selected>{{ release }}</option>
           {% elif building_version == "latest" %}

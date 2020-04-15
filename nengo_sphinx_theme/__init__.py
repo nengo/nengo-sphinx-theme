@@ -1,6 +1,7 @@
 import os
 import warnings
 
+from packaging.version import parse as parse_version
 from sphinx.errors import ConfigError
 
 from .version import version as __version__
@@ -56,3 +57,14 @@ def setup(app):
             )
 
     app.connect("config-inited", validate_config)
+
+    def add_jinja_filters(app):
+        def sort_versions(releases):
+            releases = [r for r in releases.split(",") if r.strip() != ""]
+            releases.sort(key=parse_version, reverse=True)
+            return releases
+
+        if app.builder.format == "html":
+            app.builder.templates.environment.filters["sort_versions"] = sort_versions
+
+    app.connect("builder-inited", add_jinja_filters)
