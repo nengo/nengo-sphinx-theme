@@ -16,8 +16,13 @@
       {%- endif %}
     </a>
   </h3>
+  {%- include "searchbox.html" -%}
+  <div class="p-5 toctree">
+    {{ toctree(maxdepth=theme_sidebar_toc_depth|toint, collapse=True,
+    includehidden=theme_sidebar_includehidden|tobool) }}
+  </div>
   {% if building_version %}
-  <form class="px-5 pb-5 mb-0 mt-3 border-bottom">
+  <form class="p-5 my-0 border-top">
     <div class="form-group">
       <label class="text-gray">Version:</label>
       <select class="custom-select" onchange="switchVersion(this);">
@@ -48,9 +53,4 @@
     </div>
   </form>
   {% endif %}
-  <div class="p-5 toctree">
-    {{ toctree(maxdepth=theme_sidebar_toc_depth|toint, collapse=True,
-    includehidden=theme_sidebar_includehidden|tobool) }}
-  </div>
-  {%- include "searchbox.html" -%}
 </div>

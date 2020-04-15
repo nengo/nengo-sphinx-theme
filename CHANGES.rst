@@ -22,6 +22,11 @@ Release History
 20.5 (unreleased)
 =================
 
+**Changed**
+
+- Swapped position of "search" and "version" boxes (so search is at the top
+  and version is at the bottom). (`#58`_)
+
 **Fixed**
 
 - Versions listed in the dropdown will now be sorted correctly by number rather than
