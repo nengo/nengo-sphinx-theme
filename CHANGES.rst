@@ -22,6 +22,11 @@ Release History
 20.5 (unreleased)
 =================
 
+**Added**
+
+- Added ``one_page`` theme option, which can be set to True for docs that include
+  all content on a single index page. (`#59`_)
+
 **Changed**
 
 - Swapped position of "search" and "version" boxes (so search is at the top
@@ -34,6 +39,7 @@ Release History
 - Remove empty lines from version dropdown. (`#58`_)
 
 .. _#58: https://github.com/nengo/nengo-sphinx-theme/pull/58
+.. _#59: https://github.com/nengo/nengo-sphinx-theme/pull/59
 
 1.2.2 (April 14, 2020)
 ======================
