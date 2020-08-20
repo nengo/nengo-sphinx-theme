@@ -69,6 +69,18 @@
         <div class="container">
           <div class="row">
             <div class="col-10 offset-1 pb-5 documentation-source" role="main">
+              {% if building_version == "latest" and releases %}
+              {% set stable = releases | sort_versions | first %}
+              <div class="admonition note">
+                  <p class="admonition-title">Note</p>
+                  <p>
+                  This documentation is for a development version.
+                  <a href="{{ pagename | to_root }}{{ stable }}/{{ pagename }}.html">
+                  Click here for the latest stable release ({{ stable }}).
+                  </a>
+                  </p>
+              </div>
+              {% endif %}
               {% block body %} {% endblock %}
             </div>
           </div>

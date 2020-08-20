@@ -64,7 +64,11 @@ def setup(app):
             releases.sort(key=parse_version, reverse=True)
             return releases
 
+        def to_root(pagename):
+            return "../" * pagename.count("/")
+
         if app.builder.format == "html":
             app.builder.templates.environment.filters["sort_versions"] = sort_versions
+            app.builder.templates.environment.filters["to_root"] = to_root
 
     app.connect("builder-inited", add_jinja_filters)

@@ -31,6 +31,7 @@ Release History
 
 - Swapped position of "search" and "version" boxes (so search is at the top
   and version is at the bottom). (`#58`_)
+- Added notification when viewing the development version of docs. (`#62`_)
 
 **Fixed**
 
@@ -40,6 +41,7 @@ Release History
 
 .. _#58: https://github.com/nengo/nengo-sphinx-theme/pull/58
 .. _#59: https://github.com/nengo/nengo-sphinx-theme/pull/59
+.. _#62: https://github.com/nengo/nengo-sphinx-theme/pull/62
 
 1.2.2 (April 14, 2020)
 ======================

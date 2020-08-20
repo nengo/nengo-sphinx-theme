@@ -30,11 +30,7 @@
     <div class="form-group">
       <label class="text-gray">Version:</label>
       <select class="custom-select" onchange="switchVersion(this);">
-        {% set prefix = pagename
-           | list
-           | select("equalto", "/")
-           | map("replace", "/", "../")
-           | join("") %}
+        {% set prefix = pagename | to_root %}
         {% if building_version == "latest" %}
         <option selected>latest</option>
         {% else %}
