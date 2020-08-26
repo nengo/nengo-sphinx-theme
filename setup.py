@@ -65,7 +65,11 @@ setup(
         "tests": tests_req,
     },
     python_requires=">=3.5",
-    entry_points={"sphinx.html_themes": ["nengo_sphinx_theme=nengo_sphinx_theme",],},
+    entry_points={
+        "sphinx.html_themes": [
+            "nengo_sphinx_theme=nengo_sphinx_theme",
+        ],
+    },
     classifiers=[
         "Development Status :: 4 - Beta",
         "Framework :: Nengo",
