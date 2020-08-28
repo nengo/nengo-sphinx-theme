@@ -14,7 +14,9 @@ from sphinx.util.requests import get, head
 
 @backoff.on_predicate(backoff.expo, lambda x: x.status_code == 429, max_time=60)
 @backoff.on_exception(
-    backoff.constant, requests.exceptions.RequestException, max_tries=3,
+    backoff.constant,
+    requests.exceptions.RequestException,
+    max_tries=3,
 )
 def get_with_backoff(*args, **kwargs):
     return get(*args, **kwargs)
@@ -22,7 +24,9 @@ def get_with_backoff(*args, **kwargs):
 
 @backoff.on_predicate(backoff.expo, lambda x: x.status_code == 429, max_time=60)
 @backoff.on_exception(
-    backoff.constant, requests.exceptions.RequestException, max_tries=3,
+    backoff.constant,
+    requests.exceptions.RequestException,
+    max_tries=3,
 )
 def head_with_backoff(*args, **kwargs):
     return head(*args, **kwargs)

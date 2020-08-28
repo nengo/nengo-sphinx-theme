@@ -56,6 +56,14 @@ def setup(app):
                 "'UA-000000-2'; got %r" % (analytics_id,)
             )
 
+        # check Google Tag Manager container ID
+        tagmanager_id = theme_config.get("tagmanager_id", None)
+        if tagmanager_id is not None and not tagmanager_id.startswith("GTM-"):
+            warnings.warn(
+                "'tagmanager_id' looks strange. It should look like "
+                "'GTM-XXXXXXX'; got %r" % (tagmanager_id,)
+            )
+
     app.connect("config-inited", validate_config)
 
     def add_jinja_filters(app):
