@@ -19,6 +19,7 @@ extensions = [
     "nengo_sphinx_theme",
     "nengo_sphinx_theme.ext.backoff",
     "nengo_sphinx_theme.ext.redirects",
+    "notfound.extension",
     "numpydoc",
     "nengo_sphinx_theme.ext.resolvedefaults",
     "nengo_sphinx_theme.ext.autoautosummary",
@@ -44,11 +45,15 @@ intersphinx_mapping = {
 # -- sphinx.ext.todo
 todo_include_todos = True
 
-# -- numpydoc config
-numpydoc_show_class_members = False
-
 # -- nbsphinx
 nbsphinx_timeout = -1
+
+# -- notfound.extension
+notfound_template = "404.html"
+notfound_urls_prefix = "/nengo-sphinx-theme/"
+
+# -- numpydoc config
+numpydoc_show_class_members = False
 
 # -- nengo_sphinx_theme.ext.autoautosummary
 autoautosummary_change_modules = {

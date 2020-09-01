@@ -28,6 +28,7 @@ Release History
   Note that ``tagmanager_id`` takes precedence over ``analytics_id``. (`#63`_)
 - Added ``one_page`` theme option, which can be set to True for docs that include
   all content on a single index page. (`#59`_)
+- Added custom 404 page. (`#65`_)
 
 **Changed**
 
@@ -45,6 +46,7 @@ Release History
 .. _#59: https://github.com/nengo/nengo-sphinx-theme/pull/59
 .. _#62: https://github.com/nengo/nengo-sphinx-theme/pull/62
 .. _#63: https://github.com/nengo/nengo-sphinx-theme/pull/63
+.. _#65: https://github.com/nengo/nengo-sphinx-theme/pull/65
 
 1.2.2 (April 14, 2020)
 ======================
