@@ -138,7 +138,7 @@ class AutoAutoSummary(autosummary.Autosummary):
 
             self.content.append(member_name)
 
-        return super(AutoAutoSummary, self).run()
+        return super().run()
 
 
 def patch_autosummary_import_by_name():
