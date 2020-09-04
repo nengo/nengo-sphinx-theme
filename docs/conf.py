@@ -14,11 +14,11 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx.ext.mathjax",
     "sphinx.ext.todo",
-    "sphinx.ext.viewcode",
     "nbsphinx",
     "nengo_sphinx_theme",
     "nengo_sphinx_theme.ext.backoff",
     "nengo_sphinx_theme.ext.redirects",
+    "nengo_sphinx_theme.ext.sourcelinks",
     "notfound.extension",
     "numpydoc",
     "nengo_sphinx_theme.ext.resolvedefaults",
@@ -62,6 +62,10 @@ autoautosummary_change_modules = {
         "nengo_sphinx_theme.ext.autoautosummary.a_test_function",
     ],
 }
+
+# -- nengo_sphinx_theme.ext.sourcelinks
+sourcelinks_module = "nengo_sphinx_theme"
+sourcelinks_url = "https://github.com/nengo/nengo-sphinx-theme"
 
 # -- sphinx
 nitpicky = True
