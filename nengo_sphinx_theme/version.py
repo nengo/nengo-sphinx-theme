@@ -11,7 +11,7 @@ from datetime import date
 name = "nengo_sphinx_theme"
 today = date.today()
 version_info = (today.year - 2000, today.month)
-dev = None
+dev = 0
 
 version = "{v}{dev}".format(
     v=".".join(str(v) for v in version_info),
