@@ -1,0 +1,603 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Extension tests &#8212; Nengo Sphinx Theme 20.9 docs</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,600|Rajdhani:700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.nengo.ai/css/bootstrap.css" type="text/css">
+<style>
+  body .title-bar,
+  body .documentation-source h1:after {
+    background-color: #a8acaf;
+  }
+</style>
+<!-- Google Tag Manager -->
+<script>
+ (function (w, d, s, l, i) {
+   w[l] = w[l] || [];
+   w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+   var f = d.getElementsByTagName(s)[0],
+       j = d.createElement(s),
+       dl = l != "dataLayer" ? "&l=" + l : "";
+   j.async = true;
+   j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+   f.parentNode.insertBefore(j, f);
+ })(window, document, "script", "dataLayer", "GTM-KWCR2HN");
+</script>
+<!-- End Google Tag Manager -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stickyfill/2.1.0/stickyfill.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<!-- From basic/layout.html -->
+<script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+  
+  
+<script src="_static/underscore.js"></script>
+  
+  
+<script src="_static/doctools.js"></script>
+  
+  
+<script src="_static/language_data.js"></script>
+  
+  
+<script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+  
+  
+<script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+  
+<script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Sidebar tests" href="sidebar.html" />
+    <link rel="prev" title="Style tests" href="style.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  </head><body class="bg-dark">
+
+<header class="fixed-top header-top shadow-sm">
+  <nav class="navbar navbar-expand-md navbar-light bg-white">
+    <a class="navbar-brand" href="https://www.nengo.ai/">
+      <img
+        src="https://www.nengo.ai/design/_images/general-full-light.svg"
+        alt="Nengo"
+        class="logo"
+      />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbar-collapse"
+      aria-controls="navbar-collapse"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.nengo.ai/">What is Nengo?</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.nengo.ai/examples/">Examples</a>
+        </li>
+        <li class="nav-item dropdown active">
+          <a
+            class="nav-link dropdown-toggle"
+            id="navbar-dropdown-docs"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            href="#"
+            >Documentation</a
+          >
+          <div
+            class="dropdown-menu shadow-lg border-0"
+            aria-labelledby="navbar-dropdown-docs"
+          >
+            
+            <a class="dropdown-item" href="https://www.nengo.ai/nengo/">Nengo core</a>
+            <a class="dropdown-item" href="https://github.com/nengo/nengo-gui/">NengoGUI</a>
+            <a class="dropdown-item" href="https://www.nengo.ai/nengo-dl/">NengoDL</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://www.nengo.ai/nengo-spa/">NengoSPA</a>
+            <a class="dropdown-item" href="https://www.nengo.ai/nengo-extras/">NengoExtras</a>
+            <a class="dropdown-item" href="https://arvoelke.github.io/nengolib-docs/">Nengolib</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://www.nengo.ai/nengo-fpga/">NengoFPGA</a>
+            <a class="dropdown-item" href="https://www.nengo.ai/nengo-loihi/">NengoLoihi</a>
+            <a class="dropdown-item" href="https://labs.nengo.ai/nengo-ocl/">NengoOCL</a>
+            <a class="dropdown-item" href="https://github.com/project-rig/nengo_spinnaker">NengoSpiNNaker</a>
+            <a class="dropdown-item" href="https://github.com/nengo-labs/nengo-mpi">NengoMPI</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://www.nengo.ai/keras-spiking">KerasSpiking</a>
+            <a class="dropdown-item" href="https://www.nengo.ai/pytorch-spiking">PyTorchSpiking</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://www.nengo.ai/documentation/"
+              >All documentation</a
+            >
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            id="navbar-dropdown-community"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            href="#"
+            >Community</a
+          >
+          <div
+            class="dropdown-menu shadow-lg border-0"
+            aria-labelledby="navbar-dropdown-community"
+          >
+            <a class="dropdown-item" href="https://forum.nengo.ai">Forum</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://www.nengo.ai/people/"
+              >People</a
+            >
+            <a class="dropdown-item" href="https://www.nengo.ai/summer-school/"
+              >Summer school</a
+            >
+            <a class="dropdown-item" href="https://www.nengo.ai/contributing/"
+              >Contributing</a
+            >
+            <a class="dropdown-item" href="https://www.nengo.ai/publications/"
+              >Publications</a
+            >
+            <a class="dropdown-item" href="https://www.nengo.ai/videos/"
+              >Videos</a
+            >
+            <a class="dropdown-item" href="https://www.nengo.ai/conduct/"
+              >Code of conduct</a
+            >
+            <a class="dropdown-item" href="https://www.nengo.ai/caa/">CAA</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link btn btn-success btn-sm text-white"
+            href="https://www.nengo.ai/getting-started/"
+            >Getting started</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<div class="main-content gradient-top">
+  <div class="container-fluid">
+    <div class="row"><a class="toggle-sidenav d-block d-md-none" href="#"
+  ><i class="icon-close fa fa-fw fa-arrow-left"></i
+  ><i class="icon-open fa fa-fw fa-arrow-right"></i
+></a>
+<div role="complementary" class="sidenav col-4 col-xl-3 p-0 border-right">
+  <h3 class="pt-5 px-5">
+    <a href="index.html">
+      <img
+        class="img-fluid documentation-image"
+        src="https://www.nengo.ai/design/_images/general-full-light.svg"
+        alt="Nengo Sphinx Theme"
+      />
+    </a>
+  </h3>
+<form class="px-5 py-3 my-0 border-bottom" action="search.html" method="get">
+  <div class="form-group form-group-single">
+    <input type="text" name="q" class="form-control" placeholder="Search" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+    <button type="submit" class="btn btn-link">
+      <img src="https://www.nengo.ai/img/icon-search.svg" alt="Go" />
+    </button>
+  </div>
+</form><div class="p-5 toctree">
+  
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="style.html">Style tests</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Extension tests</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#versioning">Versioning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#default-resolution">Default resolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-nengo_sphinx_theme.ext.autoautosummary">AutoAutoSummary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-nengo_sphinx_theme.ext.redirects">Redirects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-nengo_sphinx_theme.ext.backoff">Backoff</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sidebar.html">Sidebar tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebook.html">Notebook tests</a></li>
+</ul>
+
+  
+  </div>
+  
+  <form class="p-5 my-0 border-top">
+    <div class="form-group">
+      <label class="text-gray">Version:</label>
+      <select class="custom-select" onchange="switchVersion(this);">
+        
+        
+        <option value="../extensions.html">latest</option>
+        
+        
+          
+        <option selected>v20.9</option>
+          
+        
+          
+        <option value="../v1.2.2/extensions.html">
+          v1.2.2
+        </option>
+          
+        
+          
+        <option value="../v1.2.1/extensions.html">
+          v1.2.1
+        </option>
+          
+        
+          
+        <option value="../v1.2.0/extensions.html">
+          v1.2.0
+        </option>
+          
+        
+          
+        <option value="../v1.1.0/extensions.html">
+          v1.1.0
+        </option>
+          
+        
+          
+        <option value="../v1.0.3/extensions.html">
+          v1.0.3
+        </option>
+          
+        
+          
+        <option value="../v1.0.2/extensions.html">
+          v1.0.2
+        </option>
+          
+        
+          
+        <option value="../v1.0.1/extensions.html">
+          v1.0.1
+        </option>
+          
+        
+          
+        <option value="../v1.0.0/extensions.html">
+          v1.0.0
+        </option>
+          
+        
+      </select>
+    </div>
+  </form>
+  
+</div>
+      
+
+      <div class="col-12 col-md-8 col-xl-9">
+        <div class="container">
+          <div class="row">
+            <div class="col-10 offset-1 pb-5 documentation-source" role="main">
+              
+              
+  <div class="section" id="extension-tests">
+<h1>Extension tests<a class="headerlink" href="#extension-tests" title="Permalink to this headline">¶</a></h1>
+<p>This page tests the extensions that are part of this theme.</p>
+<div class="section" id="versioning">
+<h2>Versioning<a class="headerlink" href="#versioning" title="Permalink to this headline">¶</a></h2>
+<p>This extension is always used
+if <code class="docutils literal notranslate"><span class="pre">releases</span></code> are passed to the Sphinx build.</p>
+<p><a class="reference internal" href="deeply/nested/testing/page.html"><span class="doc">Deeply nested test page</span></a>
+versioned links work properly.</p>
+</div>
+<div class="section" id="default-resolution">
+<h2>Default resolution<a class="headerlink" href="#default-resolution" title="Permalink to this headline">¶</a></h2>
+<p>This extension can be enabled by adding
+<code class="docutils literal notranslate"><span class="pre">&quot;nengo_sphinx_theme.ext.resolvedefaults&quot;</span></code>
+to the <code class="docutils literal notranslate"><span class="pre">extensions</span></code> list in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.</p>
+<p>Autodoc with default resolution:</p>
+<dl class="py function">
+<dt id="nengo_sphinx_theme.ext.resolvedefaults.test_func">
+<code class="sig-prename descclassname">nengo_sphinx_theme.ext.resolvedefaults.</code><code class="sig-name descname">test_func</code><span class="sig-paren">(</span><em class="sig-param">param0=numpy.random</em>, <em class="sig-param">param1=&lt;built-in method randint of numpy.random.mtrand.RandomState object at 0x7f5178a8c048&gt;</em>, <em class="sig-param">param2=&lt;class 'numpy.random.mtrand.RandomState'&gt;</em>, <em class="sig-param">param4=RandomState(MT19937) at 0x7F51760ED990</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/nengo/nengo-sphinx-theme/blob/v20.9/nengo_sphinx_theme/ext/resolvedefaults.py#L9-L15"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nengo_sphinx_theme.ext.resolvedefaults.test_func" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that setting various different object types as args renders nicely.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="nengo_sphinx_theme.ext.resolvedefaults.TestClass">
+<em class="property">class </em><code class="sig-prename descclassname">nengo_sphinx_theme.ext.resolvedefaults.</code><code class="sig-name descname">TestClass</code><span class="sig-paren">(</span><em class="sig-param">int_param=Default&lt;1&gt;</em>, <em class="sig-param">str_param=Default&lt;'hello'&gt;</em>, <em class="sig-param">module_param=numpy.random</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/nengo/nengo-sphinx-theme/blob/v20.9/nengo_sphinx_theme/ext/resolvedefaults.py#L18-L28"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nengo_sphinx_theme.ext.resolvedefaults.TestClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>For testing that defaults are properly rendered in docs.</p>
+<p>Init method</p>
+<dl class="py method">
+<dt id="nengo_sphinx_theme.ext.resolvedefaults.TestClass.another_method">
+<code class="sig-name descname">another_method</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">module_param</span><span class="o">=</span><span class="default_value">numpy.random</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/nengo/nengo-sphinx-theme/blob/v20.9/nengo_sphinx_theme/ext/resolvedefaults.py#L27-L28"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nengo_sphinx_theme.ext.resolvedefaults.TestClass.another_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>A method</p>
+</dd></dl>
+
+</dd></dl>
+
+<p>Test built-in functions and classes:</p>
+<dl class="py function">
+<dt id="nengo_sphinx_theme.ext.resolvedefaults.test_builtin_func">
+<code class="sig-prename descclassname">nengo_sphinx_theme.ext.resolvedefaults.</code><code class="sig-name descname">test_builtin_func</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nengo_sphinx_theme.ext.resolvedefaults.test_builtin_func" title="Permalink to this definition">¶</a></dt>
+<dd><p>time() -&gt; floating point number</p>
+<p>Return the current time in seconds since the Epoch.
+Fractions of a second may be present if the system clock provides them.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="nengo_sphinx_theme.ext.resolvedefaults.TestBuiltinClass">
+<em class="property">class </em><code class="sig-prename descclassname">nengo_sphinx_theme.ext.resolvedefaults.</code><code class="sig-name descname">TestBuiltinClass</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">seed</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/nengo/nengo-sphinx-theme/blob/v20.9/nengo_sphinx_theme/ext/resolvedefaults.py#L35-L36"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nengo_sphinx_theme.ext.resolvedefaults.TestBuiltinClass" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-nengo_sphinx_theme.ext.autoautosummary">
+<span id="autoautosummary"></span><h2>AutoAutoSummary<a class="headerlink" href="#module-nengo_sphinx_theme.ext.autoautosummary" title="Permalink to this headline">¶</a></h2>
+<p>This extension automatically generates AutoSummaries for modules/classes.</p>
+<p>This extension can be enabled by adding <code class="docutils literal notranslate"><span class="pre">&quot;nengo_sphinx_theme.ext.autoautosummary&quot;</span></code>
+to the <code class="docutils literal notranslate"><span class="pre">extensions</span></code> list in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nengo_sphinx_theme.ext.renamed_autoautosummary.a_test_function" title="nengo_sphinx_theme.ext.renamed_autoautosummary.a_test_function"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nengo_sphinx_theme.ext.renamed_autoautosummary.a_test_function</span></code></a>()</p></td>
+<td><p>This is a test function.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nengo_sphinx_theme.ext.renamed_autoautosummary.TestClass" title="nengo_sphinx_theme.ext.renamed_autoautosummary.TestClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nengo_sphinx_theme.ext.renamed_autoautosummary.TestClass</span></code></a>()</p></td>
+<td><p>This is a test class.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nengo_sphinx_theme.ext.autoautosummary.AutoAutoSummary" title="nengo_sphinx_theme.ext.autoautosummary.AutoAutoSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nengo_sphinx_theme.ext.autoautosummary.AutoAutoSummary</span></code></a>(…)</p></td>
+<td><p>Automatically generates a summary for a class or module.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nengo_sphinx_theme.ext.autoautosummary.patch_autosummary_import_by_name" title="nengo_sphinx_theme.ext.autoautosummary.patch_autosummary_import_by_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nengo_sphinx_theme.ext.autoautosummary.patch_autosummary_import_by_name</span></code></a>()</p></td>
+<td><p>Monkeypatch a function in autosummary to disallow module cycles</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nengo_sphinx_theme.ext.autoautosummary.RenameMixin" title="nengo_sphinx_theme.ext.autoautosummary.RenameMixin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nengo_sphinx_theme.ext.autoautosummary.RenameMixin</span></code></a></p></td>
+<td><p>Mixin for adding renaming functionality to autodocumenters.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nengo_sphinx_theme.ext.autoautosummary.RenameClassDocumenter" title="nengo_sphinx_theme.ext.autoautosummary.RenameClassDocumenter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nengo_sphinx_theme.ext.autoautosummary.RenameClassDocumenter</span></code></a>(*args)</p></td>
+<td><p>Class autodocumenter with optional renaming.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nengo_sphinx_theme.ext.autoautosummary.RenameFunctionDocumenter" title="nengo_sphinx_theme.ext.autoautosummary.RenameFunctionDocumenter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nengo_sphinx_theme.ext.autoautosummary.RenameFunctionDocumenter</span></code></a>(…)</p></td>
+<td><p>Function autodocumenter with optional renaming.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nengo_sphinx_theme.ext.autoautosummary.RenameExceptionDocumenter" title="nengo_sphinx_theme.ext.autoautosummary.RenameExceptionDocumenter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nengo_sphinx_theme.ext.autoautosummary.RenameExceptionDocumenter</span></code></a>(*args)</p></td>
+<td><p>Exception autodocumenter with optional renaming.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nengo_sphinx_theme.ext.autoautosummary.RenameDecoratorDocumenter" title="nengo_sphinx_theme.ext.autoautosummary.RenameDecoratorDocumenter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nengo_sphinx_theme.ext.autoautosummary.RenameDecoratorDocumenter</span></code></a>(…)</p></td>
+<td><p>Decorator autodocumenter with optional renaming.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nengo_sphinx_theme.ext.autoautosummary.RenameMethodDocumenter" title="nengo_sphinx_theme.ext.autoautosummary.RenameMethodDocumenter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nengo_sphinx_theme.ext.autoautosummary.RenameMethodDocumenter</span></code></a>(…)</p></td>
+<td><p>Method autodocumenter with optional renaming.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py function">
+<dt id="nengo_sphinx_theme.ext.renamed_autoautosummary.a_test_function">
+<code class="sig-prename descclassname">nengo_sphinx_theme.ext.renamed_autoautosummary.</code><code class="sig-name descname">a_test_function</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nengo_sphinx_theme.ext.renamed_autoautosummary.a_test_function" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a test function.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="nengo_sphinx_theme.ext.autoautosummary.AutoAutoSummary">
+<em class="property">class </em><code class="sig-prename descclassname">nengo_sphinx_theme.ext.autoautosummary.</code><code class="sig-name descname">AutoAutoSummary</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">arguments</span></em>, <em class="sig-param"><span class="n">options</span></em>, <em class="sig-param"><span class="n">content</span></em>, <em class="sig-param"><span class="n">lineno</span></em>, <em class="sig-param"><span class="n">content_offset</span></em>, <em class="sig-param"><span class="n">block_text</span></em>, <em class="sig-param"><span class="n">state</span></em>, <em class="sig-param"><span class="n">state_machine</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/nengo/nengo-sphinx-theme/blob/v20.9/nengo_sphinx_theme/ext/autoautosummary.py#L51-L141"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nengo_sphinx_theme.ext.autoautosummary.AutoAutoSummary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Automatically generates a summary for a class or module.</p>
+<p>For classes this adds a summary for all methods.</p>
+<p>For modules this adds a summary for all classes/functions.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="nengo_sphinx_theme.ext.autoautosummary.patch_autosummary_import_by_name">
+<code class="sig-prename descclassname">nengo_sphinx_theme.ext.autoautosummary.</code><code class="sig-name descname">patch_autosummary_import_by_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/nengo/nengo-sphinx-theme/blob/v20.9/nengo_sphinx_theme/ext/autoautosummary.py#L144-L155"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nengo_sphinx_theme.ext.autoautosummary.patch_autosummary_import_by_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Monkeypatch a function in autosummary to disallow module cycles</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="nengo_sphinx_theme.ext.autoautosummary.RenameMixin">
+<em class="property">class </em><code class="sig-prename descclassname">nengo_sphinx_theme.ext.autoautosummary.</code><code class="sig-name descname">RenameMixin</code><a class="reference external" href="https://github.com/nengo/nengo-sphinx-theme/blob/v20.9/nengo_sphinx_theme/ext/autoautosummary.py#L158-L182"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nengo_sphinx_theme.ext.autoautosummary.RenameMixin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mixin for adding renaming functionality to autodocumenters.</p>
+<dl class="py method">
+<dt id="nengo_sphinx_theme.ext.autoautosummary.RenameMixin.add_directive_header">
+<code class="sig-name descname">add_directive_header</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sig</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/nengo/nengo-sphinx-theme/blob/v20.9/nengo_sphinx_theme/ext/autoautosummary.py#L161-L182"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nengo_sphinx_theme.ext.autoautosummary.RenameMixin.add_directive_header" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change the modname so that <code class="docutils literal notranslate"><span class="pre">:module:</span> <span class="pre">renamed_module</span></code> is added in the header.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="nengo_sphinx_theme.ext.autoautosummary.RenameClassDocumenter">
+<em class="property">class </em><code class="sig-prename descclassname">nengo_sphinx_theme.ext.autoautosummary.</code><code class="sig-name descname">RenameClassDocumenter</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/nengo/nengo-sphinx-theme/blob/v20.9/nengo_sphinx_theme/ext/autoautosummary.py#L185-L186"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nengo_sphinx_theme.ext.autoautosummary.RenameClassDocumenter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class autodocumenter with optional renaming.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="nengo_sphinx_theme.ext.autoautosummary.RenameFunctionDocumenter">
+<em class="property">class </em><code class="sig-prename descclassname">nengo_sphinx_theme.ext.autoautosummary.</code><code class="sig-name descname">RenameFunctionDocumenter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">directive</span></em>, <em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">indent</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/nengo/nengo-sphinx-theme/blob/v20.9/nengo_sphinx_theme/ext/autoautosummary.py#L189-L190"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nengo_sphinx_theme.ext.autoautosummary.RenameFunctionDocumenter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function autodocumenter with optional renaming.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="nengo_sphinx_theme.ext.autoautosummary.RenameExceptionDocumenter">
+<em class="property">class </em><code class="sig-prename descclassname">nengo_sphinx_theme.ext.autoautosummary.</code><code class="sig-name descname">RenameExceptionDocumenter</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/nengo/nengo-sphinx-theme/blob/v20.9/nengo_sphinx_theme/ext/autoautosummary.py#L193-L194"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nengo_sphinx_theme.ext.autoautosummary.RenameExceptionDocumenter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception autodocumenter with optional renaming.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="nengo_sphinx_theme.ext.autoautosummary.RenameDecoratorDocumenter">
+<em class="property">class </em><code class="sig-prename descclassname">nengo_sphinx_theme.ext.autoautosummary.</code><code class="sig-name descname">RenameDecoratorDocumenter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">directive</span></em>, <em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">indent</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/nengo/nengo-sphinx-theme/blob/v20.9/nengo_sphinx_theme/ext/autoautosummary.py#L197-L198"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nengo_sphinx_theme.ext.autoautosummary.RenameDecoratorDocumenter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decorator autodocumenter with optional renaming.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="nengo_sphinx_theme.ext.autoautosummary.RenameMethodDocumenter">
+<em class="property">class </em><code class="sig-prename descclassname">nengo_sphinx_theme.ext.autoautosummary.</code><code class="sig-name descname">RenameMethodDocumenter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">directive</span></em>, <em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">indent</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/nengo/nengo-sphinx-theme/blob/v20.9/nengo_sphinx_theme/ext/autoautosummary.py#L201-L202"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nengo_sphinx_theme.ext.autoautosummary.RenameMethodDocumenter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method autodocumenter with optional renaming.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="nengo_sphinx_theme.ext.renamed_autoautosummary.TestClass">
+<em class="property">class </em><code class="sig-prename descclassname">nengo_sphinx_theme.ext.renamed_autoautosummary.</code><code class="sig-name descname">TestClass</code><a class="headerlink" href="#nengo_sphinx_theme.ext.renamed_autoautosummary.TestClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a test class.</p>
+<p>This is the init method.</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nengo_sphinx_theme.ext.renamed_autoautosummary.TestClass._another_private_method" title="nengo_sphinx_theme.ext.renamed_autoautosummary.TestClass._another_private_method"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nengo_sphinx_theme.ext.renamed_autoautosummary.TestClass._another_private_method</span></code></a></p></td>
+<td><p>This method will be manually added.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nengo_sphinx_theme.ext.renamed_autoautosummary.TestClass.a_method" title="nengo_sphinx_theme.ext.renamed_autoautosummary.TestClass.a_method"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nengo_sphinx_theme.ext.renamed_autoautosummary.TestClass.a_method</span></code></a></p></td>
+<td><p>This is a method.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nengo_sphinx_theme.ext.renamed_autoautosummary.TestClass.a_static_method" title="nengo_sphinx_theme.ext.renamed_autoautosummary.TestClass.a_static_method"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nengo_sphinx_theme.ext.renamed_autoautosummary.TestClass.a_static_method</span></code></a></p></td>
+<td><p>This is a static method.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt id="nengo_sphinx_theme.ext.renamed_autoautosummary.TestClass.a_method">
+<code class="sig-name descname">a_method</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nengo_sphinx_theme.ext.renamed_autoautosummary.TestClass.a_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nengo_sphinx_theme.ext.renamed_autoautosummary.TestClass.a_static_method">
+<em class="property">static </em><code class="sig-name descname">a_static_method</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nengo_sphinx_theme.ext.renamed_autoautosummary.TestClass.a_static_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a static method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nengo_sphinx_theme.ext.renamed_autoautosummary.TestClass._a_private_method">
+<code class="sig-name descname">_a_private_method</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nengo_sphinx_theme.ext.renamed_autoautosummary.TestClass._a_private_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>A private method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nengo_sphinx_theme.ext.renamed_autoautosummary.TestClass._another_private_method">
+<code class="sig-name descname">_another_private_method</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nengo_sphinx_theme.ext.renamed_autoautosummary.TestClass._another_private_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method will be manually added.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-nengo_sphinx_theme.ext.redirects">
+<span id="redirects"></span><h2>Redirects<a class="headerlink" href="#module-nengo_sphinx_theme.ext.redirects" title="Permalink to this headline">¶</a></h2>
+<p>This extension generates pages to redirect a URL from an old location to a new one.
+These pages will only be generated when building with the HTML builder.</p>
+<p>This extension can be enabled by adding <code class="docutils literal notranslate"><span class="pre">&quot;nengo_sphinx_theme.ext.redirects&quot;</span></code>
+to the <code class="docutils literal notranslate"><span class="pre">extensions</span></code> list in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.</p>
+<p>This extension adds a new configuration option to <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> called
+<code class="docutils literal notranslate"><span class="pre">html_redirects</span></code>. <code class="docutils literal notranslate"><span class="pre">html_redirects</span></code> is a list of tuples, where each tuple has
+two elements: the original location and the new location. Locations are usually
+strings pointing to HTML files, but the new location can also be an anchor link
+or some other valid URL.</p>
+<p>As an example, suppose we rename a file from <code class="docutils literal notranslate"><span class="pre">user_guide.rst</span></code> to <code class="docutils literal notranslate"><span class="pre">user-guide.rst</span></code>,
+and move the content on <code class="docutils literal notranslate"><span class="pre">dev_guide.rst</span></code> to a section in <code class="docutils literal notranslate"><span class="pre">user-guide.rst</span></code>.
+The redirects might look like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html_redirects</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s2">&quot;user_guide.html&quot;</span><span class="p">,</span> <span class="s2">&quot;user-guide.html&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;dev_guide.html&quot;</span><span class="p">,</span> <span class="s2">&quot;user-guide.html#developers&quot;</span><span class="p">)</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>The following page should redirect to the
+<a class="reference external" href="redirect/to/nested-page.html">deeply nested testing page</a>.</p>
+</div>
+<div class="section" id="module-nengo_sphinx_theme.ext.backoff">
+<span id="backoff"></span><h2>Backoff<a class="headerlink" href="#module-nengo_sphinx_theme.ext.backoff" title="Permalink to this headline">¶</a></h2>
+<p>Monkeypatches the Sphinx HTTP request functions to add exponential backoff.</p>
+<p>The main use case for this is to avoid server-side rejections caused by too many
+requests when running the linkchecker.</p>
+</div>
+</div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div><footer class="text-light footer-main gradient-bottom">
+  <p class="small text-center mb-0">
+    <a class="no-hover-line" href="https://appliedbrainresearch.com">
+      <img
+        src="https://appliedbrainresearch.com/img/logo-blue-notext.svg"
+        height="48"
+      />
+    </a>
+    <a href="https://www.nengo.ai/">What is Nengo?</a>
+    <a href="https://www.nengo.ai/examples/">Examples</a>
+    <a href="https://www.nengo.ai/documentation/">Documentation</a>
+    <a href="https://www.nengo.ai/getting-started/">Getting started</a>
+    <a href="https://www.nengo.ai/privacy/">Privacy</a>
+  </p>
+  <p class="small text-center mb-0">&copy; Applied Brain Research</p>
+</footer>
+<script>
+  function switchVersion(select) {
+    var option = select.selectedOptions[0];
+    if (option.hasAttribute("value")) {
+      window.location = option.value;
+    }
+  }
+</script>
+
+<script>
+  var elements = document.querySelectorAll('.sidenav');
+  Stickyfill.add(elements);
+</script>
+<script>
+  ScrollReveal().reveal(".fade-in", {
+      scale: 0.85,
+      duration: 1000,
+      delay: 250,
+      interval: 50
+  });
+</script>
+<script>
+  $('a.toggle-sidenav').on('click', function(e) {
+    e.preventDefault();
+    if ( $(this).hasClass('active') ) {
+      $(this).removeClass('active');
+      $('.sidenav').removeClass('open');
+    } else {
+      $(this).addClass('active');
+      $('.sidenav').addClass('open');
+    }
+  });
+</script>
+<script>
+  var lists = document.querySelectorAll('.toctree ul');
+  lists.forEach((ul) => {
+      ul.classList.add("nav");
+  });
+  var links = document.querySelectorAll('.toctree a');
+  links.forEach((link) => {
+      link.classList.add("nav-link");
+  });
+  $("body").scrollspy({target: ".sidenav"});
+</script>
+  </body>
+</html>
