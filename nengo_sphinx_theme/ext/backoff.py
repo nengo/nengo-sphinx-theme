@@ -5,9 +5,8 @@ The main use case for this is to avoid server-side rejections caused by too many
 requests when running the linkchecker.
 """
 
-import requests
-
 import backoff
+import requests
 from sphinx.util import requests as sphinx_requests
 from sphinx.util.requests import get, head
 

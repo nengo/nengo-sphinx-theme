@@ -1,9 +1,9 @@
 import inspect
-import warnings
 import time
+import warnings
 
-from nengo.params import Default, IntParam, iter_params, StringParam
 import numpy as np
+from nengo.params import Default, IntParam, StringParam, iter_params
 
 
 def test_func(

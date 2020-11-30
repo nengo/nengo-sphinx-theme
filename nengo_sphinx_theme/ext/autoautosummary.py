@@ -7,15 +7,13 @@ to the ``extensions`` list in ``conf.py``.
 
 import inspect
 
-from docutils.parsers.rst import directives
 import sphinx.ext.autodoc as autodoc
 import sphinx.ext.autosummary as autosummary
+from docutils.parsers.rst import directives
 
 # We import nengo_sphinx_theme here to test the issue that
 # `patch_autosummary_import_by_name` fixes.
-
 import nengo_sphinx_theme  # pylint: disable=unused-import
-
 
 # should be ignored
 a_test_attribute = None
