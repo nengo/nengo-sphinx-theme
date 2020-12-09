@@ -22,6 +22,11 @@ Release History
 20.10 (unreleased)
 ==================
 
+**Fixed**
+
+- Aliases of renamed classes will now be handled correctly. (`#70`_)
+
+.. _#70: https://github.com/nengo/nengo-sphinx-theme/pull/70
 
 20.9 (September 9, 2020)
 ========================

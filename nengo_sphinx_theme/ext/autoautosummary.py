@@ -10,6 +10,8 @@ import inspect
 import sphinx.ext.autodoc as autodoc
 import sphinx.ext.autosummary as autosummary
 from docutils.parsers.rst import directives
+from sphinx.ext.autodoc import StringList, _
+from sphinx.util.typing import stringify
 
 # We import nengo_sphinx_theme here to test the issue that
 # `patch_autosummary_import_by_name` fixes.
@@ -44,6 +46,10 @@ class TestClass:
 
     def _another_private_method(self):
         """This method will be manually added."""
+
+
+# test that alias of class in `autoautosummary_change_module` refers to renamed class
+TestClassAlias = TestClass
 
 
 class AutoAutoSummary(autosummary.Autosummary):
@@ -182,6 +188,26 @@ class RenameMixin:
 
 class RenameClassDocumenter(RenameMixin, autodoc.ClassDocumenter):
     """Class autodocumenter with optional renaming."""
+
+    def add_content(self, more_content, no_docstring=False):
+        # This is a modified version of autodoc.ClassDocumenter.add_content
+        # that changes the module name for aliases
+        no_docstring = False
+        if self.doc_as_attr:
+            fullname = stringify(self.object)
+            modname = self.env.config["autoautosummary_change_modules"].get(
+                fullname, ".".join(fullname.split(".")[:-1])
+            )
+
+            more_content = StringList(
+                [_(f"alias of :class:`{modname}.{fullname.split('.')[-1]}`")], source=""
+            )
+            no_docstring = True
+
+        # no_docstring only needs to be specified in sphinx<3.4
+        super(autodoc.ClassDocumenter, self).add_content(
+            more_content, no_docstring=no_docstring
+        )
 
 
 class RenameFunctionDocumenter(RenameMixin, autodoc.FunctionDocumenter):
