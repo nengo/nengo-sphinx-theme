@@ -22,20 +22,8 @@ The redirects might look like this::
 
 """
 
-import errno
-import os
+import pathlib
 from textwrap import dedent
-
-
-def mkdir_p(path):
-    try:
-        os.makedirs(path)
-    except OSError as exc:
-        if exc.errno == errno.EEXIST and os.path.isdir(path):
-            pass
-        else:
-            raise
-
 
 out_html = dedent(
     """\
@@ -56,14 +44,14 @@ out_html = dedent(
 
 
 def setup(app):
-    def redirect_pages(app, docname):
+    def redirect_pages(app):
         if app.builder.name == "html":
+            outdir = pathlib.Path(app.outdir)
             for src, dst in app.config.html_redirects:
-                srcfile = os.path.join(app.outdir, src)
+                srcfile = outdir / src
                 dsturl = "/".join([".." for _ in range(src.count("/"))] + [dst])
-                mkdir_p(os.path.dirname(srcfile))
-                with open(srcfile, "w") as fp:
-                    fp.write(out_html.format(dsturl))
+                srcfile.parent.mkdir(parents=True, exist_ok=True)
+                srcfile.write_text(out_html.format(dsturl), encoding="utf-8")
 
     app.add_config_value("html_redirects", [], "")
-    app.connect("build-finished", redirect_pages)
+    app.connect("builder-inited", redirect_pages)

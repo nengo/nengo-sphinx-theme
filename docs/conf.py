@@ -84,6 +84,7 @@ default_role = "py:obj"
 pygments_style = "sphinx"
 user_agent = "nengo_sphinx_theme"
 autodoc_typehints = "none"
+linkcheck_ignore = linkcheck_ignore + ["redirect/to/nested-page.html"]
 
 project = "Nengo Sphinx Theme"
 authors = "Applied Brain Research"
