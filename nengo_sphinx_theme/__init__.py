@@ -8,7 +8,7 @@ from .version import version as __version__
 
 assert __version__
 
-__copyright__ = "2018-2020 Applied Brain Research"
+__copyright__ = "2018-2021 Applied Brain Research"
 current_dir = os.path.abspath(os.path.dirname(__file__))
 
 
