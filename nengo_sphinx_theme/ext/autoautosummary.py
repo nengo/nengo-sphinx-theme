@@ -150,11 +150,10 @@ def patch_autosummary_import_by_name():
 
     orig_f = autosummary.import_by_name
 
-    def import_by_name(name, prefixes):
+    def import_by_name(name, prefixes=None):
         # We currently do not support prefixes, because they can cause cycles. If we
         # need this in the future, we can go back to filtering problematic prefixes.
-        prefixes = [None]
-        return orig_f(name, prefixes)
+        return orig_f(name)
 
     autosummary.import_by_name = import_by_name
 
@@ -192,7 +191,6 @@ class RenameClassDocumenter(RenameMixin, autodoc.ClassDocumenter):
     def add_content(self, more_content, no_docstring=False):
         # This is a modified version of autodoc.ClassDocumenter.add_content
         # that changes the module name for aliases
-        no_docstring = False
         if self.doc_as_attr:
             fullname = stringify(self.object)
             modname = self.env.config["autoautosummary_change_modules"].get(
@@ -202,12 +200,8 @@ class RenameClassDocumenter(RenameMixin, autodoc.ClassDocumenter):
             more_content = StringList(
                 [_(f"alias of :class:`{modname}.{fullname.split('.')[-1]}`")], source=""
             )
-            no_docstring = True
 
-        # no_docstring only needs to be specified in sphinx<3.4
-        super(autodoc.ClassDocumenter, self).add_content(
-            more_content, no_docstring=no_docstring
-        )
+        super(autodoc.ClassDocumenter, self).add_content(more_content)
 
 
 class RenameFunctionDocumenter(RenameMixin, autodoc.FunctionDocumenter):

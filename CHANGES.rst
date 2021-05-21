@@ -22,11 +22,16 @@ Release History
 20.10 (unreleased)
 ==================
 
+**Changed**
+
+- Added support for Sphinx 4.0, minimum Sphinx version is now 4.0. (`#71`_)
+
 **Fixed**
 
 - Aliases of renamed classes will now be handled correctly. (`#70`_)
 
 .. _#70: https://github.com/nengo/nengo-sphinx-theme/pull/70
+.. _#71: https://github.com/nengo/nengo-sphinx-theme/pull/71
 
 20.9 (September 9, 2020)
 ========================

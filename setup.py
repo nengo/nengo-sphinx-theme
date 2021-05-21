@@ -30,14 +30,14 @@ root = pathlib.Path(__file__).parent
 version = runpy.run_path(str(root / "nengo_sphinx_theme" / "version.py"))["version"]
 
 install_req = [
-    "sphinx>=3.1.2",
+    "sphinx>=4.0.2",
     "sphinx-notfound-page>=0.5.0",
     "backoff>=1.10.0",
 ]
 docs_req = [
     "jupyter",
     "matplotlib",
-    "nbsphinx",
+    "nbsphinx>=0.8.5",
     "nengo",
     "numpydoc",
 ]
