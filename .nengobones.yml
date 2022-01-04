@@ -4,6 +4,7 @@ repo_name: nengo/nengo-sphinx-theme
 
 description: Sphinx theme for Nengo project documentation pages
 copyright_start: 2019
+license: abr-free
 
 travis_yml:
   python: 3.6
@@ -59,7 +60,6 @@ setup_py:
     - "Development Status :: 4 - Beta"
     - "Framework :: Nengo"
     - "Intended Audience :: Developers"
-    - "License :: Free for non-commercial use"
     - "Operating System :: Microsoft :: Windows"
     - "Operating System :: POSIX :: Linux"
     - "Programming Language :: Python"
