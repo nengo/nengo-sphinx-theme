@@ -150,10 +150,10 @@ def patch_autosummary_import_by_name():
 
     orig_f = autosummary.import_by_name
 
-    def import_by_name(name, prefixes=None):
+    def import_by_name(name, prefixes=None, **kwargs):
         # We currently do not support prefixes, because they can cause cycles. If we
         # need this in the future, we can go back to filtering problematic prefixes.
-        return orig_f(name)
+        return orig_f(name, **kwargs)
 
     autosummary.import_by_name = import_by_name
 
