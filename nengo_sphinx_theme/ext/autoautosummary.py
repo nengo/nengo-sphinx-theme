@@ -7,9 +7,8 @@ to the ``extensions`` list in ``conf.py``.
 
 import inspect
 
-import sphinx.ext.autodoc as autodoc
-import sphinx.ext.autosummary as autosummary
 from docutils.parsers.rst import directives
+from sphinx.ext import autodoc, autosummary
 from sphinx.ext.autodoc import StringList, _
 from sphinx.util.typing import stringify
 
@@ -205,6 +204,7 @@ class RenameClassDocumenter(RenameMixin, autodoc.ClassDocumenter):
             no_docstring = True
 
         # no_docstring only needs to be specified in sphinx<3.4
+        # pylint: disable=bad-super-call
         super(autodoc.ClassDocumenter, self).add_content(
             more_content, no_docstring=no_docstring
         )

@@ -70,6 +70,7 @@ setup_py:
 setup_cfg:
   pylint:
     disable:
+      - consider-using-f-string  # TODO: remove this once we have tests
       - missing-docstring
 
 docs_conf_py:
