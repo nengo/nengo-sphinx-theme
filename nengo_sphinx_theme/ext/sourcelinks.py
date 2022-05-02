@@ -49,7 +49,7 @@ def set_resolver(_, config):  # noqa: C901
 
         try:
             source, lineno = inspect.getsourcelines(obj)
-            linespec = "#L%d-L%d" % (lineno, lineno + len(source) - 1)
+            linespec = f"#L{lineno}-L{lineno + len(source) - 1}"
         except IOError:
             linespec = ""
 
@@ -60,12 +60,12 @@ def set_resolver(_, config):  # noqa: C901
             ),
         )
 
-        return "%s/blob/%s/%s/%s%s" % (
-            config["sourcelinks_url"],
-            "master" if "dev" in config["release"] else ("v" + config["release"]),
-            config["sourcelinks_module"],
-            fn,
-            linespec,
+        return (
+            f"{config['sourcelinks_url']}"
+            f"/blob"
+            f"/{'master' if 'dev' in config['release'] else ('v' + config['release'])}"
+            f"/{config['sourcelinks_module']}"
+            f"/{fn}{linespec}"
         )
 
     config["linkcode_resolve"] = linkcode_resolve

@@ -52,16 +52,16 @@ def setup(app):
         analytics_id = theme_config.get("analytics_id", None)
         if analytics_id is not None and not analytics_id.startswith("UA-"):
             warnings.warn(
-                "'analytics_id' looks strange. It should look like "
-                "'UA-000000-2'; got %r" % (analytics_id,)
+                f"'analytics_id' looks strange. It should look like "
+                f"'UA-000000-2'; got {analytics_id!r}"
             )
 
         # check Google Tag Manager container ID
         tagmanager_id = theme_config.get("tagmanager_id", None)
         if tagmanager_id is not None and not tagmanager_id.startswith("GTM-"):
             warnings.warn(
-                "'tagmanager_id' looks strange. It should look like "
-                "'GTM-XXXXXXX'; got %r" % (tagmanager_id,)
+                f"'tagmanager_id' looks strange. It should look like "
+                f"'GTM-XXXXXXX'; got {tagmanager_id!r}"
             )
 
     app.connect("config-inited", validate_config)

@@ -82,8 +82,7 @@ class AutoAutoSummary(autosummary.Autosummary):
 
         else:
             raise TypeError(
-                "AutoAutoSummary only works with classes or modules (got %s)"
-                % type(obj)
+                f"AutoAutoSummary only works with classes or modules (got {type(obj)})"
             )
 
         excluded = [
@@ -116,7 +115,7 @@ class AutoAutoSummary(autosummary.Autosummary):
             if inspect.ismodule(obj):
                 # the renaming is on the level of module objects (e.g., classes),
                 # so add the object name before doing the name lookup
-                item_name = "%s.%s" % (fullname, item)
+                item_name = f"{fullname}.{item}"
 
                 # look up any renaming, defaulting to the current module name
                 renamed_module = self.env.config["autoautosummary_change_modules"].get(
@@ -124,7 +123,7 @@ class AutoAutoSummary(autosummary.Autosummary):
                 )
 
                 # add the item name to the (renamed) module
-                member_name = "%s.%s" % (renamed_module, item)
+                member_name = f"{renamed_module}.{item}"
             else:
                 # obj is already a renameable object (e.g. a class), so we're just
                 # looking up based on fullname
@@ -137,7 +136,7 @@ class AutoAutoSummary(autosummary.Autosummary):
                 )
 
                 # add class and member name to renamed module
-                member_name = "%s.%s.%s" % (renamed_module, obj_name, item)
+                member_name = f"{renamed_module}.{obj_name}.{item}"
 
             self.content.append(member_name)
 

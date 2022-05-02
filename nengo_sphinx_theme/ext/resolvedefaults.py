@@ -52,10 +52,9 @@ def resolve_default(cls, param):
     else:
         for cls_param in (getattr(cls, name) for name in iter_params(cls)):
             if cls_param.name == param.name:
-                return DisplayDefault("Default<{!r}>".format(cls_param.default))
+                return DisplayDefault(f"Default<{cls_param.default!r}>")
         warnings.warn(
-            "Default value for argument {} of {} could not be "
-            "resolved.".format(param.name, cls)
+            f"Default value for argument {param.name} of {cls} could not be resolved."
         )
         return param.default
 
