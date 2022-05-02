@@ -94,3 +94,7 @@ docs_conf_py:
 pre_commit_config_yaml: {}
 
 pyproject_toml: {}
+
+version_py:
+  type: calver
+  release: false
