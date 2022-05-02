@@ -33,6 +33,7 @@ install_req = [
     "sphinx>=3.1.2,<4.0",
     "sphinx-notfound-page>=0.5.0",
     "backoff>=1.10.0",
+    "jinja2<3.1.0",
 ]
 docs_req = [
     "jupyter",
