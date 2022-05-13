@@ -49,7 +49,10 @@ def setup(app):
             outdir = pathlib.Path(app.outdir)
             for src, dst in app.config.html_redirects:
                 srcfile = outdir / src
-                dsturl = "/".join([".." for _ in range(src.count("/"))] + [dst])
+                if dst.startswith("http"):  # Absolute URL
+                    dsturl = dst
+                else:  # Relative URL
+                    dsturl = "/".join([".." for _ in range(src.count("/"))] + [dst])
                 srcfile.parent.mkdir(parents=True, exist_ok=True)
                 srcfile.write_text(out_html.format(dsturl), encoding="utf-8")
 

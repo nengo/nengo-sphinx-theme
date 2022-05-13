@@ -108,4 +108,8 @@ html_theme_options = {
 }
 html_redirects = [
     ("redirect/to/nested-page.html", "deeply/nested/testing/page.html"),
+    ("redirect/to/external.html", "https://www.nengo.ai/"),
 ]
+
+# --- linkchecker options
+linkcheck_ignore = [r"redirect/to/.*.html"]

@@ -25,8 +25,10 @@ Release History
 **Fixed**
 
 - Aliases of renamed classes will now be handled correctly. (`#70`_)
+- Redirecting to an absolute URL from a file in a subdirectory now works. (`#74`_)
 
 .. _#70: https://github.com/nengo/nengo-sphinx-theme/pull/70
+.. _#74: https://github.com/nengo/nengo-sphinx-theme/pull/74
 
 20.9 (September 9, 2020)
 ========================

@@ -1,0 +1,4 @@
+{% include "templates/docs/conf.py.template"  %}
+
+# --- linkchecker options
+linkcheck_ignore = [r"redirect/to/.*.html"]

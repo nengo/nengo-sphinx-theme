@@ -58,6 +58,9 @@ Redirects
 The following page should redirect to the
 `deeply nested testing page <redirect/to/nested-page.html>`_.
 
+This following link should redirect to
+`nengo.ai <redirect/to/external.html>`_.
+
 Backoff
 =======
 

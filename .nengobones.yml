@@ -83,6 +83,7 @@ docs_conf_py:
   tagmanager_id: GTM-KWCR2HN
   html_redirects:
     redirect/to/nested-page.html: deeply/nested/testing/page.html
+    redirect/to/external.html: https://www.nengo.ai/
   autoautosummary_change_modules:
     nengo_sphinx_theme.ext.renamed_autoautosummary:
       - nengo_sphinx_theme.ext.autoautosummary.TestClass
