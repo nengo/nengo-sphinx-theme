@@ -15,7 +15,8 @@ travis_yml:
   deploy_dists:
     - sdist
     - bdist_wheel
-  slack_notifications: "Z7RbxwewCMpVGFmJTESN3qsW3Oe3p5ZUgHtAZAvfYWnQCA0aEBAZF1tJyKfXw4z\
+  slack_notifications:
+    "Z7RbxwewCMpVGFmJTESN3qsW3Oe3p5ZUgHtAZAvfYWnQCA0aEBAZF1tJyKfXw4z\
     tl0JCSm0raPkKAGk6tNrQoRb0VzEltH2n9nyfuVedsQrC2PRa6Mq270Soct6DHqQuKbLyuoJZlAAqzmfD8\
     2gdddkEkO2jL72f8b/ypXlWfgT4/+rFPdxDzVuj+/HMEpnM+7//8/v8XQfoWwfqYrxJ/eo95T/RxOhQR3G\
     fGogfQkY2uFbs9ajdQDQ9xsqo/+qCCg5YoPGMDpacXu4uMBZ5OydguuJOYANBDQQhPWrPI2YncA38oCl5z\
@@ -50,7 +51,7 @@ setup_py:
     - sphinx>=3.1.2,<4.0
     - sphinx-notfound-page>=0.5.0
     - backoff>=1.10.0
-    - jinja2<3.1.0  # can remove this if we upgrade to sphinx>=4.0
+    - jinja2<3.1.0 # can remove this if we upgrade to sphinx>=4.0
   docs_req:
     - jupyter
     - matplotlib
@@ -71,7 +72,7 @@ setup_py:
 setup_cfg:
   pylint:
     disable:
-      - consider-using-f-string  # TODO: remove this once we have tests
+      - consider-using-f-string # TODO: remove this once we have tests
       - missing-docstring
 
 docs_conf_py:
@@ -80,7 +81,6 @@ docs_conf_py:
   extensions:
     - nengo_sphinx_theme.ext.resolvedefaults
     - nengo_sphinx_theme.ext.autoautosummary
-  tagmanager_id: GTM-KWCR2HN
   html_redirects:
     redirect/to/nested-page.html: deeply/nested/testing/page.html
     redirect/to/external.html: https://www.nengo.ai/
@@ -90,7 +90,7 @@ docs_conf_py:
       - nengo_sphinx_theme.ext.autoautosummary.a_test_function
   sphinx_options:
     autodoc_typehints: "'none'"
-    linkcheck_ignore: linkcheck_ignore + ["redirect/to/nested-page.html"]
+    linkcheck_ignore: linkcheck_ignore + [r"redirect/to/.*.html"]
 
 pre_commit_config_yaml: {}
 

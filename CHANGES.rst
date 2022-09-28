@@ -22,6 +22,15 @@ Release History
 20.10 (unreleased)
 ==================
 
+**Added**
+
+- Added ``analytics`` theme option to allow specifying any tracking code. (`#75`_)
+
+**Removed**
+
+- Removed ``analytics_id`` and ``tagmanager_id`` theme options. Use ``analytics``
+  to specify the full tracking code instead. (`#75`_)
+
 **Fixed**
 
 - Aliases of renamed classes will now be handled correctly. (`#70`_)
@@ -29,6 +38,7 @@ Release History
 
 .. _#70: https://github.com/nengo/nengo-sphinx-theme/pull/70
 .. _#74: https://github.com/nengo/nengo-sphinx-theme/pull/74
+.. _#75: https://github.com/nengo/nengo-sphinx-theme/pull/75
 
 20.9 (September 9, 2020)
 ========================

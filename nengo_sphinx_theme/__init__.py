@@ -30,7 +30,7 @@ def setup(app):
             )
         elif html_logo:
             warnings.warn(
-                "Logo set using 'html_logo', consider using " "'nengo_logo' instead"
+                "Logo set using 'html_logo', consider using 'nengo_logo' instead"
             )
 
         # check versioning config
@@ -47,22 +47,6 @@ def setup(app):
 
         if building == "":
             warnings.warn("'building_version' not set, versions will not be rendered")
-
-        # check Google Analytics ID
-        analytics_id = theme_config.get("analytics_id", None)
-        if analytics_id is not None and not analytics_id.startswith("UA-"):
-            warnings.warn(
-                f"'analytics_id' looks strange. It should look like "
-                f"'UA-000000-2'; got {analytics_id!r}"
-            )
-
-        # check Google Tag Manager container ID
-        tagmanager_id = theme_config.get("tagmanager_id", None)
-        if tagmanager_id is not None and not tagmanager_id.startswith("GTM-"):
-            warnings.warn(
-                f"'tagmanager_id' looks strange. It should look like "
-                f"'GTM-XXXXXXX'; got {tagmanager_id!r}"
-            )
 
     app.connect("config-inited", validate_config)
 
