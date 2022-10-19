@@ -19,7 +19,6 @@ The redirects might look like this::
        ("user_guide.html", "user-guide.html"),
        ("dev_guide.html", "user-guide.html#developers")
    ]
-
 """
 
 import pathlib

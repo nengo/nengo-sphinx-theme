@@ -1,8 +1,9 @@
 """
 This extension automatically generates AutoSummaries for modules/classes.
 
-This extension can be enabled by adding ``"nengo_sphinx_theme.ext.autoautosummary"``
-to the ``extensions`` list in ``conf.py``.
+This extension can be enabled by adding
+``"nengo_sphinx_theme.ext.autoautosummary"`` to the ``extensions`` list in
+``conf.py``.
 """
 
 import inspect
@@ -144,7 +145,7 @@ class AutoAutoSummary(autosummary.Autosummary):
 
 
 def patch_autosummary_import_by_name():
-    """Monkeypatch a function in autosummary to disallow module cycles"""
+    """Monkeypatch a function in autosummary to disallow module cycles."""
 
     orig_f = autosummary.import_by_name
 
@@ -161,9 +162,8 @@ class RenameMixin:
     """Mixin for adding renaming functionality to autodocumenters."""
 
     def add_directive_header(self, sig):
-        """
-        Change the modname so that ``:module: renamed_module`` is added in the header.
-        """
+        """Change the modname so that ``:module: renamed_module`` is added in the
+        header."""
 
         modname = self.modname
 

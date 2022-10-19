@@ -1,6 +1,6 @@
 """
-This extension replaces the default Sphinx HTML source links with links to some
-other site (e.g., GitHub).
+This extension replaces the default Sphinx HTML source links with links to some other
+site (e.g., GitHub).
 
 This extension can be enabled by adding ``"nengo_sphinx_theme.ext.sourcelinks"``
 to the ``extensions`` list in ``conf.py``.
@@ -18,7 +18,8 @@ import sys
 
 def set_resolver(_, config):  # noqa: C901
     def linkcode_resolve(domain, info):
-        """Determine the URL corresponding to Python object.
+        """
+        Determine the URL corresponding to Python object.
 
         Code borrowed from:
             https://github.com/numpy/numpy/blob/master/doc/source/conf.py

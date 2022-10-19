@@ -22,10 +22,10 @@ class TestClass:
     str_param = StringParam("str_param", default="hello")
 
     def __init__(self, int_param=Default, str_param=Default, module_param=np.random):
-        """Init method"""
+        """Init method."""
 
     def another_method(self, module_param=np.random):
-        """A method"""
+        """A method."""
 
 
 # `inspect.signature` fails on built-ins; test that `autodoc_defaults` handles this
