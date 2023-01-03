@@ -30,6 +30,7 @@ root = pathlib.Path(__file__).parent
 version = runpy.run_path(str(root / "nengo_sphinx_theme" / "version.py"))["version"]
 
 install_req = [
+    "docutils<0.17",
     "sphinx>=3.1.2,<4.0",
     "sphinx-notfound-page>=0.5.0",
     "backoff>=1.10.0",
