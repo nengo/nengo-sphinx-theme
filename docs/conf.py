@@ -88,7 +88,7 @@ linkcheck_ignore = linkcheck_ignore + [r"redirect/to/.*.html"]
 
 project = "Nengo Sphinx Theme"
 authors = "Applied Brain Research"
-copyright = "2019-2022 Applied Brain Research"
+copyright = "2019-2023 Applied Brain Research"
 version = ".".join(nengo_sphinx_theme.__version__.split(".")[:2])  # Short X.Y version
 release = nengo_sphinx_theme.__version__  # Full version, with tags
 
