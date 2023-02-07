@@ -5,6 +5,7 @@ repo_name: nengo/nengo-sphinx-theme
 description: Sphinx theme for Nengo project documentation pages
 copyright_start: 2019
 license: abr-free
+main_branch: main
 
 ci_scripts:
   - template: static
