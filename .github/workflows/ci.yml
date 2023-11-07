@@ -14,6 +14,10 @@ on:
         required: false
         default: false
 
+defaults:
+  run:
+    shell: bash -el {0}
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -24,11 +28,15 @@ jobs:
           - script: static
           - script: docs
     env:
-      GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      GH_TOKEN: ${{ secrets.PUBLIC_GH_TOKEN }}
     steps:
       - uses: nengo/nengo-bones/actions/setup@main
         with:
           python-version: "3.9"
+      - name: Install pandoc
+        if: ${{ matrix.script == 'docs' }}
+        run: |
+          micromamba install pandoc
       - uses: nengo/nengo-bones/actions/generate-and-check@main
       - uses: nengo/nengo-bones/actions/run-script@main
         with:
