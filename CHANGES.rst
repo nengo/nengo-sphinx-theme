@@ -26,6 +26,10 @@ Release History
 
 - Added ``analytics`` theme option to allow specifying any tracking code. (`#75`_)
 
+**Changed**
+
+- Now supports/requires Sphinx 7. (`#80`_)
+
 **Removed**
 
 - Removed ``analytics_id`` and ``tagmanager_id`` theme options. Use ``analytics``
@@ -39,6 +43,7 @@ Release History
 .. _#70: https://github.com/nengo/nengo-sphinx-theme/pull/70
 .. _#74: https://github.com/nengo/nengo-sphinx-theme/pull/74
 .. _#75: https://github.com/nengo/nengo-sphinx-theme/pull/75
+.. _#80: https://github.com/nengo/nengo-sphinx-theme/pull/80
 
 20.9 (September 9, 2020)
 ========================

@@ -11,7 +11,7 @@ import inspect
 from docutils.parsers.rst import directives
 from sphinx.ext import autodoc, autosummary
 from sphinx.ext.autodoc import StringList, _
-from sphinx.util.typing import stringify
+from sphinx.util.typing import stringify_annotation
 
 # We import nengo_sphinx_theme here to test the issue that
 # `patch_autosummary_import_by_name` fixes.
@@ -149,10 +149,10 @@ def patch_autosummary_import_by_name():
 
     orig_f = autosummary.import_by_name
 
-    def import_by_name(name, prefixes):
+    def import_by_name(name, prefixes=(None,)):
         # We currently do not support prefixes, because they can cause cycles. If we
         # need this in the future, we can go back to filtering problematic prefixes.
-        prefixes = [None]
+        prefixes = (None,)
         return orig_f(name, prefixes)
 
     autosummary.import_by_name = import_by_name
@@ -187,12 +187,11 @@ class RenameMixin:
 class RenameClassDocumenter(RenameMixin, autodoc.ClassDocumenter):
     """Class autodocumenter with optional renaming."""
 
-    def add_content(self, more_content, no_docstring=False):
+    def add_content(self, more_content):
         # This is a modified version of autodoc.ClassDocumenter.add_content
         # that changes the module name for aliases
-        no_docstring = False
         if self.doc_as_attr:
-            fullname = stringify(self.object)
+            fullname = stringify_annotation(self.object)
             modname = self.env.config["autoautosummary_change_modules"].get(
                 fullname, ".".join(fullname.split(".")[:-1])
             )
@@ -200,13 +199,8 @@ class RenameClassDocumenter(RenameMixin, autodoc.ClassDocumenter):
             more_content = StringList(
                 [_(f"alias of :class:`{modname}.{fullname.split('.')[-1]}`")], source=""
             )
-            no_docstring = True
 
-        # no_docstring only needs to be specified in sphinx<3.4
-        # pylint: disable=bad-super-call
-        super(autodoc.ClassDocumenter, self).add_content(
-            more_content, no_docstring=no_docstring
-        )
+        super(autodoc.ClassDocumenter, self).add_content(more_content)
 
 
 class RenameFunctionDocumenter(RenameMixin, autodoc.FunctionDocumenter):
