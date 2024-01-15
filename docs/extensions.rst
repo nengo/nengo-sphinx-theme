@@ -60,8 +60,3 @@ The following page should redirect to the
 
 This following link should redirect to
 `nengo.ai <redirect/to/external.html>`_.
-
-Backoff
-=======
-
-.. automodule:: nengo_sphinx_theme.ext.backoff

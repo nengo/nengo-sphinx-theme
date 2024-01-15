@@ -31,7 +31,6 @@ setup_py:
   install_req:
     - sphinx>=7.2.6
     - sphinx-notfound-page>=1.0.0
-    - backoff>=1.10.0
   docs_req:
     - jupyter
     - matplotlib

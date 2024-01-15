@@ -30,7 +30,6 @@ version = runpy.run_path(str(root / "nengo_sphinx_theme" / "version.py"))["versi
 install_req = [
     "sphinx>=7.2.6",
     "sphinx-notfound-page>=1.0.0",
-    "backoff>=1.10.0",
 ]
 docs_req = [
     "jupyter",

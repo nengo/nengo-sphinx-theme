@@ -34,6 +34,8 @@ Release History
 
 - Removed ``analytics_id`` and ``tagmanager_id`` theme options. Use ``analytics``
   to specify the full tracking code instead. (`#75`_)
+- Removed ``backoff`` extension (no longer necessary, since Sphinx has this
+  behaviour built in). (`#80`_)
 
 **Fixed**
 
