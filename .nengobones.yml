@@ -22,6 +22,8 @@ manifest_in:
   global-include:
     - "*.conf"
     - "*.html"
+    - "*.css"
+    - "*.svg"
 
 setup_py:
   entry_points:

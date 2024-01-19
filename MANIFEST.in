@@ -39,3 +39,5 @@ global-exclude *.pyc *.pyo *.pyd
 # Repo-specific files
 global-include *.conf
 global-include *.html
+global-include *.css
+global-include *.svg
